@@ -1,0 +1,74 @@
+.header__fixed {
+  @apply card-shadow-m bg-maingray;
+}
+
+.header__menu-list-active {
+  @apply left-0;
+}
+
+.header__menu-list-active .header__menu-list-item {
+  @apply mr-0;
+}
+
+.header__burger.active-burger::before {
+  @apply rotate-45 top-[6px];
+}
+
+.header__burger.active-burger::after {
+  @apply -rotate-45 bottom-[10px];
+}
+
+.header__burger.active-burger span {
+  @apply scale-0;
+}
+
+
+/* Container */
+@screen xl {
+  .container {
+    @apply max-w-[1280px];
+  }
+}
+
+.link-with-svg svg path {
+  @apply transition-colors;
+}
+
+.link-with-svg:hover svg path {
+  @apply fill-primary-light;
+}
+
+.projects__item:hover .projects__hover {
+  @apply opacity-100;
+}
+
+
+
+
+.form-status .success-text {
+  @apply hidden;
+}
+
+.form-status.success .success-text {
+  @apply inline-block;
+}
+
+.form-status.success .send-text {
+  @apply hidden;
+}
+
+.form-status.success {
+  @apply bg-system-success;
+}
+
+.header__language.is-visible .header__language-menu {
+  @apply opacity-100 pointer-events-auto visible;
+}
+
+.header__language.is-visible .header__language-trigger::after {
+  @apply rotate-180;
+}
+
+/* .header__language-trigger::after{
+  transform: translateY(-50%);
+} */
