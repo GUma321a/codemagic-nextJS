@@ -1,25 +1,25 @@
-import {Link} from '../../../atoms';
+import { Link } from '../../../../atoms';
 import React from 'react';
 
-import about_1 from '../../../../assets/images/illustrations/about-1.jpg';
-import about_2 from '../../../../assets/images/illustrations/about-2.jpg';
-import about_3 from '../../../../assets/images/illustrations/about-3.jpg';
+import about_1 from '../../../../../assets/images/illustrations/about-1.jpg';
+import about_2 from '../../../../../assets/images/illustrations/about-2.jpg';
+import about_3 from '../../../../../assets/images/illustrations/about-3.jpg';
 
 function SectionAbout() {
   return (
     <section className="about my-60 lg:my-160">
       <div className="container">
         <div className="about__wrapper lg:flex lg:justify-between mb-lg md:mb-80">
-          <h2 className="about__title heading-h2">About Me</h2>
+          <h2 className="about__title heading-h2">Про мене</h2>
           <div className="about__inner flex-60">
             <p className="about__text my-md lg:mt-0 body-text-m text-gray-400 lg:mb-lg">
-              Hi, my name is Alexander. I'm Front-End Developer.
+              Привіт мене звати Олександр Я Front-End Developer.
             </p>
             <Link
-              href="/about"
+              href="/ua/about"
               className="about__button button-link-m text-primary-light hover:text-primary-dark hover:duration-200 duration-200"
             >
-              More About Me
+              Більше про мене
             </Link>
           </div>
         </div>

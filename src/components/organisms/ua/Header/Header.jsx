@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Link } from '../../atoms';
-import logo from '../../../assets/images/logo.svg';
+import logo from '../../../../assets/images/logo.svg';
 
 function Header() {
   let [open, setOpen] = React.useState(false);
@@ -15,7 +15,7 @@ function Header() {
       <div className="header__container mx-auto w-full px-sm lg:px-md xl:px-2xl">
         <div className="header__navbar flex justify-between items-center w-full">
           <div className="header__logo flex items-center z-110 max-w-[150px] lg:max-w-[200px]">
-            <Link href="/" className="header__logo-link">
+            <Link href="/ua" className="header__logo-link">
               <img className="max-w-full" src={logo.src} alt="Logo" loading="lazy" />
             </Link>
           </div>
@@ -25,15 +25,15 @@ function Header() {
                 className="header__language-trigger relative after:absolute after:bg-[url('../images/decor/arrow-down-mobile.svg')]  after:transition-all after:w-[15px] after:h-[10px] after:bg-no-repeat after:top-[37%] after:translate-y-[-50%] after:left-[120%]"
                 onClick={languageMenu}
               >
-                ENG
+                УКР
               </p>
               {open && (
                 <div className="header__language-menu">
                   <Link
-                    href="/ua/"
+                    href="/"
                     className="header__language-menu-item absolute top-[120%] bg-white text-third-light p-[10px] hover:text-primary-light"
                   >
-                    UA
+                    АНГЛ
                   </Link>
                 </div>
               )}
@@ -42,25 +42,25 @@ function Header() {
               <li className="header__menu-list-item mr-xl">
                 <Link
                   className="header__menu-list-link menu-link py-md border-b-gray-200 border-b w-full transition-colors hover:text-primary-light lg:py-0 lg:border-none"
-                  href="/about"
+                  href="/ua/about"
                 >
-                  About me
+                  Про мене
                 </Link>
               </li>
               <li className="header__menu-list-item mr-xl">
                 <Link
                   className="header__menu-list-link menu-link py-md border-b-gray-200 border-b w-full transition-colors hover:text-primary-light lg:py-0 lg:border-none"
-                  href="/my-works"
+                  href="/ua/my-works"
                 >
-                  My work
+                  Мої роботи
                 </Link>
               </li>
               <li className="header__menu-list-item mr-xl">
                 <Link
                   className="header__menu-list-link menu-link py-md border-b-gray-200 border-b w-full transition-colors hover:text-primary-light lg:py-0 lg:border-none"
-                  href="/contact"
+                  href="/ua/contact"
                 >
-                  Contact me
+                  Зв'язок зі мною
                 </Link>
               </li>
             </ul>
