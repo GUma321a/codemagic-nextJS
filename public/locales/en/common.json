@@ -1,0 +1,17 @@
+{
+  "header": {
+    "menu__list__link__1": "About me",
+    "menu__list__link__2": "My work",
+    "menu__list__link__3": "Contact me"
+  },
+  "language": {
+    "en": "en",
+    "ua": "ua"
+  },
+  "footer": {
+    "text-title": "Have an idea? I can help you to Start your project",
+    "text-subtitle": "Say hello to me 👋",
+    "user-name": "Alexandr Chernikov",
+    "user-position": "Front-End Developer"
+  }
+}

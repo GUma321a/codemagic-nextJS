@@ -1,4 +1,4 @@
-import {Link} from '../../../atoms';
+import { Link } from '../../../atoms';
 import React from 'react';
 
 import about_1 from '../../../../assets/images/illustrations/about-1.jpg';

@@ -1,10 +1,13 @@
 import React from 'react';
+import { useTranslation } from 'next-i18next';
 
 import about_1 from '../../../../assets/images/illustrations/about-1.jpg';
 import about_2 from '../../../../assets/images/illustrations/about-2.jpg';
 import about_3 from '../../../../assets/images/illustrations/about-3.jpg';
 
 function About() {
+  const { t } = useTranslation();
+
   return (
     <section className="about mb-60 mt-[100px] lg:my-160">
       <div className="container">

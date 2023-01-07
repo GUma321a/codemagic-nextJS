@@ -1,19 +1,24 @@
-import { Link } from '../../atoms';
 import React from 'react';
+
+import { Link } from '../../atoms';
+import { useTranslation } from 'next-i18next';
+
 import photo from '../../../assets/images/photos/preview-photo-mini.jpg';
 import instagram from '../../../assets/images/icons/Instagram.svg';
 import telegram from '../../../assets/images/icons/telegram.svg';
 
 function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="footer bg-third-dark pt-[40px] lg:pt-96 pb-lg">
       <div className="container">
         <div className="footer__top flex flex-wrap mb-2xl lg:mb-[96px] lg:justify-between">
           <div className="footer__text max-w-[450px] mb-lg lg:mb-0 xl:max-w-[565px]">
-            <p className="footer__text-title heading-h3 mb-2xl">
-              Have an idea? I can help you to Start your project
+            <p className="footer__text-title heading-h3 mb-2xl">{t('footer.text-title')}</p>
+            <p className="footer__text-subtitle body-text-m text-gray-200">
+              {t('footer.text-subtitle')}
             </p>
-            <p className="footer__text-subtitle body-text-m text-gray-200">Say hello to me 👋</p>
             <p className="footer__text-mail heading-h4 text-gray-300 hover:text-white transition-colors">
               <Link href="mailto:alexandrchernicov@gmail.com">alexandrchernicov@gmail.com</Link>
             </p>
@@ -29,8 +34,8 @@ function Footer() {
                 ></img>
               </div>
               <div className="footer__user-inner ml-[10px] sm:ml-lg text-gray-300">
-                <p className="footer__user-name heading-h3">Alexandr Chernikov</p>
-                <p className="footer__user-position body-text-m">Front-End Developer</p>
+                <p className="footer__user-name heading-h3">{t('footer.user-name')}</p>
+                <p className="footer__user-position body-text-m">{t('footer.user-position')}</p>
               </div>
             </div>
             <ul className="footer__social flex">
@@ -61,13 +66,13 @@ function Footer() {
           </div>
           <ul className="footer__menu menu-link text-center flex justify-center flex-col sm:flex-row">
             <li className="fotter__menu-item transition-colors hover:text-primary-light">
-              <Link href="/about">About me</Link>
+              <Link href="/about">{t('header.menu__list__link__1')}</Link>
             </li>
             <li className="fotter__menu-item transition-colors hover:text-primary-light mt-sm sm:mt-0 sm:ml-lg">
-              <Link href="/my-works">My Work</Link>
+              <Link href="/my-works">{t('header.menu__list__link__2')}</Link>
             </li>
             <li className="fotter__menu-item transition-colors hover:text-primary-light mt-sm sm:mt-0 sm:ml-lg">
-              <Link href="/contact">Contact me</Link>
+              <Link href="/contact">{t('header.menu__list__link__3')}</Link>
             </li>
           </ul>
         </div>
