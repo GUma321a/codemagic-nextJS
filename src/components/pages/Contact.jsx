@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionForm from '../organisms/Contact/SectionForm';
+import SectionForm from '../organisms/Contact/SectionForm/SectionForm';
 
 function Contact() {
   return (

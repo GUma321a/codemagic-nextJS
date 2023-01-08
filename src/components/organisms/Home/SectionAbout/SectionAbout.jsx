@@ -4,22 +4,25 @@ import React from 'react';
 import about_1 from '../../../../assets/images/illustrations/about-1.jpg';
 import about_2 from '../../../../assets/images/illustrations/about-2.jpg';
 import about_3 from '../../../../assets/images/illustrations/about-3.jpg';
+import { useTranslation } from 'next-i18next';
 
 function SectionAbout() {
+  const { t } = useTranslation('home');
+
   return (
     <section className="about my-60 lg:my-160">
       <div className="container">
         <div className="about__wrapper lg:flex lg:justify-between mb-lg md:mb-80">
-          <h2 className="about__title heading-h2">About Me</h2>
+          <h2 className="about__title heading-h2">{t('about.title')}</h2>
           <div className="about__inner flex-60">
             <p className="about__text my-md lg:mt-0 body-text-m text-gray-400 lg:mb-lg">
-              Hi, my name is Alexander. I'm Front-End Developer.
+              {t('about.text')}
             </p>
             <Link
               href="/about"
               className="about__button button-link-m text-primary-light hover:text-primary-dark hover:duration-200 duration-200"
             >
-              More About Me
+              {t('about.link')}
             </Link>
           </div>
         </div>

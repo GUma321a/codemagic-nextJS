@@ -1,0 +1,30 @@
+{
+  "about": {
+    "title": "About Me",
+    "text": "Hi, my name is Alexander. I'm Front-End Developer.",
+    "link": "More About Me"
+  },
+  "hero": {
+    "subtitle": "HELLO! I AM Alexander Chernikov",
+    "title": "Building Delightful Design Experiences for Users.",
+    "text": "If you have a website design, then what to expect?",
+    "info-button": "Start a Project",
+    "contact-title": "Contact me at"
+  },
+  "history": {
+    "title": "My courses",
+    "text-1": "Passing the course 'HTML & CSS' on stepik",
+    "text-2": "Completion of the course 'from 0 to 1' by Vadym Prokopchuk",
+    "text-3": "Completion of course 'JavaScript + React' from Ivan Petrechenko",
+    "text-4": "Completion of course 'React Pizza' from Dennis Archakov"
+  },
+  "works": {
+    "title": "My Recent Work",
+    "subtitle": "I love taking Design from vision to reality.",
+    "link-1": "View Project",
+    "link-2": "View all projects"
+  },
+  "skills": {
+    "title": "Skills"
+  }
+}
