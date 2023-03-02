@@ -9,6 +9,32 @@ import telegram from '../../../assets/images/icons/telegram.svg';
 
 function Footer() {
   const { t } = useTranslation();
+  const menu = [
+    {
+      text: t('header.menu__list__link__1'),
+      href: '/about',
+    },
+    {
+      text: t('header.menu__list__link__2'),
+      href: '/my-works',
+    },
+    {
+      text: t('header.menu__list__link__3'),
+      href: '/contact',
+    },
+  ];
+  const social = [
+    {
+      href: 'https://t.me/gu_ma_ink',
+      src: telegram,
+      alt: 'telegram',
+    },
+    {
+      href: 'https://www.instagram.com/gu_ma_ink/',
+      src: instagram,
+      alt: 'instagram',
+    },
+  ];
 
   return (
     <footer className="footer bg-third-dark pt-[40px] lg:pt-96 pb-lg">
@@ -39,24 +65,19 @@ function Footer() {
               </div>
             </div>
             <ul className="footer__social flex">
-              <li className="footer__social-item">
-                <Link target="_blank" href="https://www.instagram.com/gu_ma_ink/">
-                  <img
-                    className="link-with-svg transition-colors w-[42px] h-[42px]"
-                    src={instagram.src}
-                    alt="instagram"
-                  />
-                </Link>
-              </li>
-              <li className="footer__social-item ml-sm">
-                <Link className="" target="_blank" href="https://t.me/gu_ma_ink">
-                  <img
-                    className="link-with-svg transition-colors w-[42px] h-[42px]"
-                    src={telegram.src}
-                    alt="telegram"
-                  />
-                </Link>
-              </li>
+              {social.map((item, index) => {
+                return (
+                  <li className="footer__social-item" key={index}>
+                    <Link target="_blank" href={item.href}>
+                      <img
+                        className="link-with-svg transition-colors w-[42px] h-[42px]"
+                        src={item.src.src}
+                        alt={item.alt}
+                      />
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
@@ -65,15 +86,16 @@ function Footer() {
             CodeMagic @2022
           </div>
           <ul className="footer__menu menu-link text-center flex justify-center flex-col sm:flex-row">
-            <li className="fotter__menu-item transition-colors hover:text-primary-light">
-              <Link href="/about">{t('header.menu__list__link__1')}</Link>
-            </li>
-            <li className="fotter__menu-item transition-colors hover:text-primary-light mt-sm sm:mt-0 sm:ml-lg">
-              <Link href="/my-works">{t('header.menu__list__link__2')}</Link>
-            </li>
-            <li className="fotter__menu-item transition-colors hover:text-primary-light mt-sm sm:mt-0 sm:ml-lg">
-              <Link href="/contact">{t('header.menu__list__link__3')}</Link>
-            </li>
+            {menu.map((item, index) => {
+              return (
+                <li
+                  className="fotter__menu-item transition-colors hover:text-primary-light mt-sm sm:mt-0 sm:ml-lg"
+                  key={index}
+                >
+                  <Link href={item.href}>{item.text}</Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>

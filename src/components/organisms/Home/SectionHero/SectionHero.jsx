@@ -2,6 +2,7 @@ import { Link } from '../../../atoms';
 import React from 'react';
 
 import photo from '../../../../assets/images/photos/preview-photo.jpg';
+
 import { useTranslation } from 'next-i18next';
 
 function SectionHero() {

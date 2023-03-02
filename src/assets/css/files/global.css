@@ -22,7 +22,6 @@
   @apply scale-0;
 }
 
-
 /* Container */
 @screen xl {
   .container {
@@ -41,9 +40,6 @@
 .projects__item:hover .projects__hover {
   @apply opacity-100;
 }
-
-
-
 
 .form-status .success-text {
   @apply hidden;
@@ -67,6 +63,10 @@
 
 .header__language.is-visible .header__language-trigger::after {
   @apply rotate-180;
+}
+
+.footer__social-item + .footer__social-item {
+  @apply ml-sm;
 }
 
 /* .header__language-trigger::after{
