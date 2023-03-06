@@ -83,7 +83,7 @@ function Footer() {
         </div>
         <div className="footer__bottom flex flex-col md:flex-row flex-wrap justify-between">
           <div className="footer__copy body-text-s text-gray-600 order-1 mx-auto mt-xl md:order-none md:mt-0 md:order-0 md:m-0">
-            CodeMagic @2022
+            CodeMagic @2023
           </div>
           <ul className="footer__menu menu-link text-center flex justify-center flex-col sm:flex-row">
             {menu.map((item, index) => {

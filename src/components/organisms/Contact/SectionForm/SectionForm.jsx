@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'next-i18next';
+import Form from '../../../atoms/Telegram';
 
 function SectionForm() {
   const { t } = useTranslation('contact');
@@ -10,7 +11,7 @@ function SectionForm() {
         <div className="caption-wrapper max-w-[624px] mx-auto">
           <p className="contact__caption caption-s">{t('caption')}</p>
           <h2 className="contact__title heading-h2 mb-md">{t('title')}</h2>
-          <form
+          {/* <form
             className="contact-form__form telegram-form"
             method="POST"
             names="Name Email Message"
@@ -52,7 +53,8 @@ function SectionForm() {
               <span className="send-text">{t('button')}</span>
               <span className="success-text">{t('button__success')}</span>
             </button>
-          </form>
+          </form> */}
+          <Form />
         </div>
       </div>
     </section>

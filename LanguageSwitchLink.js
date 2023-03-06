@@ -6,7 +6,6 @@ import i18next from 'i18next';
 
 const LanguageSwitchLink = ({ locale, ...rest }) => {
   const router = useRouter();
-  console.log(i18next);
   let href = rest.href || router.asPath;
   let pName = router.pathname;
   Object.keys(router.query).forEach((k) => {
@@ -22,7 +21,7 @@ const LanguageSwitchLink = ({ locale, ...rest }) => {
 
   let [open, setOpen] = useState(false);
   const languageMenu = () => {
-    setOpen(!open);
+    setOpen(!open), languageDetector.cache(locale);
   };
 
   return (
