@@ -1,6 +1,6 @@
 import React from 'react';
 
-import NotFound from '../src/components/pages/NotFound';
+import NotFound from '../../src/components/pages/NotFound';
 import { getStaticPaths, makeStaticProps } from '../../getStatic';
 // import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 

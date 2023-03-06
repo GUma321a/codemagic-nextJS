@@ -1,5 +1,3 @@
-// const bot = new TelegramBot('bot5572452932.AAEqjC4_b6ZKHRJyBeTCK0iQxVowJ_qiUVA');
-// const chatId = '-780517028';
 import React, { useState } from 'react';
 import axios from 'axios';
 

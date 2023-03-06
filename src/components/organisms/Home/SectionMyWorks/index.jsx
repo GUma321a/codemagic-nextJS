@@ -1,3 +1,3 @@
-import SectionMyWork from './SectionMyWork'
+import SectionMyWork from './SectionMyWork';
 
 export default SectionMyWork;

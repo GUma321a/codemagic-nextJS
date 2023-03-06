@@ -1,6 +1,6 @@
 import React from 'react';
 import { Html, Head, Main, NextScript } from 'next/document';
-import nextI18nextConfig from '../next-i18next.config';
+// import nextI18nextConfig from '../next-i18next.config';
 
 export default function Document() {
   // const currentLocale =
