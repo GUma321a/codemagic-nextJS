@@ -4,7 +4,7 @@ import axios from 'axios';
 const TELEGRAM_API_URL =
   'https://api.telegram.org/bot5572452932:AAEqjC4_b6ZKHRJyBeTCK0iQxVowJ_qiUVA/sendMessage';
 
-const Form = () => {
+function Form() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -31,18 +31,24 @@ const Form = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="name">Name:</label>
-      <input id="name" type="text" value={name} onChange={(e) => setName(e.target.value)} />
+      <label htmlFor="name">
+        Name:
+        <input id="name" type="text" value={name} onChange={(e) => setName(e.target.value)} />
+      </label>
 
-      <label htmlFor="email">Email:</label>
-      <input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+      <label htmlFor="email">
+        Email:
+        <input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+      </label>
 
-      <label htmlFor="message">Message:</label>
-      <textarea id="message" value={message} onChange={(e) => setMessage(e.target.value)} />
+      <label htmlFor="message">
+        Message:
+        <textarea id="message" value={message} onChange={(e) => setMessage(e.target.value)} />
+      </label>
 
       <button type="submit">Send Message</button>
     </form>
   );
-};
+}
 
 export default Form;

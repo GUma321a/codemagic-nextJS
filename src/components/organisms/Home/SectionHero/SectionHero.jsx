@@ -1,9 +1,8 @@
-import { Link } from '../../../atoms';
 import React from 'react';
+import { useTranslation } from 'next-i18next';
+import { Link } from '../../../atoms';
 
 import photo from '../../../../assets/images/photos/preview-photo.jpg';
-
-import { useTranslation } from 'next-i18next';
 
 function SectionHero() {
   const { t } = useTranslation('home');
@@ -27,9 +26,9 @@ function SectionHero() {
               <img
                 className="max-h-[300px] w-full md:max-h-[500px]"
                 src={photo.src}
-                alt="photo"
+                alt="user"
                 loading="lazy"
-              ></img>
+              />
             </div>
             <div className="contact-me__wrapper">
               <div className="contact-me__title body-text-s text-16 text-gray-200 mb-[4px]">

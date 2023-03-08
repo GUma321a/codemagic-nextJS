@@ -1,10 +1,10 @@
-import { Link } from '../../../atoms';
 import React from 'react';
+import { useTranslation } from 'next-i18next';
+import { Link } from '../../../atoms';
 
 import about_1 from '../../../../assets/images/illustrations/about-1.jpg';
 import about_2 from '../../../../assets/images/illustrations/about-2.jpg';
 import about_3 from '../../../../assets/images/illustrations/about-3.jpg';
-import { useTranslation } from 'next-i18next';
 
 function SectionAbout() {
   const { t } = useTranslation('home');
@@ -31,25 +31,25 @@ function SectionAbout() {
             <img
               className="max-h-[160px] w-full 450:max-h-[200px] md:max-h-[500px]"
               src={about_1.src}
-              alt="photo"
+              alt="about"
               loading="lazy"
-            ></img>
+            />
           </div>
           <div className="about__image max-h-[500px]">
             <img
               className="max-h-[160px] w-full 450:max-h-[200px] md:max-h-[500px]"
               src={about_2.src}
-              alt="photo"
+              alt="about"
               loading="lazy"
-            ></img>
+            />
           </div>
           <div className="about__image max-h-[500px] md:col-span-2 lg:col-auto">
             <img
               className="max-h-[160px] w-full 450:max-h-[200px] md:max-h-[500px]"
               src={about_3.src}
-              alt="photo"
+              alt="about"
               loading="lazy"
-            ></img>
+            />
           </div>
         </div>
       </div>

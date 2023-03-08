@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'next-i18next';
 import { Link } from '../../../atoms';
 
 import site_1 from '../../../../assets/images/illustrations/site-1.jpg';
@@ -8,7 +9,6 @@ import site_4 from '../../../../assets/images/illustrations/site-4.jpg';
 import site_5 from '../../../../assets/images/illustrations/site-5.jpg';
 import site_6 from '../../../../assets/images/illustrations/site-6.jpg';
 import site_7 from '../../../../assets/images/illustrations/site-7.jpg';
-import { useTranslation } from 'next-i18next';
 
 function SectionProjects() {
   const { t } = useTranslation('home');

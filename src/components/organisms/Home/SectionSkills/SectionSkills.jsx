@@ -25,7 +25,7 @@ function SectionSkills() {
               return (
                 <p
                   className="services__subtitle heading-h3 flex-100 flex items-center mt-md justify-start pl-[65px] relative before:absolute before:w-lg before:h-lg before:bg-[url('../images/decor/services-icon.svg')] before:left-0 before:top-1/2 before:-translate-y-1/2 md:mt-0 lg:flex-[40%]"
-                  key={index}
+                  key={index.id}
                 >
                   {item.text}
                 </p>

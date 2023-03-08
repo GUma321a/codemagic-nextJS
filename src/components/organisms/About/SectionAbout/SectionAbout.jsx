@@ -25,7 +25,7 @@ function About() {
             <img
               className="max-h-[160px] w-full 450:max-h-[200px] md:max-h-[500px]"
               src={about_1.src}
-              alt="photo"
+              alt="decore"
               loading="lazy"
             />
           </div>
@@ -33,7 +33,7 @@ function About() {
             <img
               className="max-h-[160px] w-full 450:max-h-[200px] md:max-h-[500px]"
               src={about_2.src}
-              alt="photo"
+              alt="decore"
               loading="lazy"
             />
           </div>
@@ -41,7 +41,7 @@ function About() {
             <img
               className="max-h-[160px] w-full 450:max-h-[200px] md:max-h-[500px]"
               src={about_3.src}
-              alt="photo"
+              alt="decore"
               loading="lazy"
             />
           </div>

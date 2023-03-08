@@ -19,6 +19,6 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'react/require-default-props': 'off',
     'react/jsx-props-no-spreading': 'off',
+    'prettier/prettier': ['error', { endOfLine: 'auto' }],
   },
-  endOfLine: 'off',
 };

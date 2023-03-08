@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Link } from '../../atoms';
 import { useTranslation } from 'next-i18next';
+import { Link } from '../../atoms';
 
 import photo from '../../../assets/images/photos/preview-photo-mini.jpg';
 import instagram from '../../../assets/images/icons/Instagram.svg';
@@ -55,9 +55,9 @@ function Footer() {
                 <img
                   className="rounded-full w-[50px] h-[50px] sm:w-[96px] sm:h-[96px]"
                   src={photo.src}
-                  alt="photo"
+                  alt="user"
                   loading="lazy"
-                ></img>
+                />
               </div>
               <div className="footer__user-inner ml-[10px] sm:ml-lg text-gray-300">
                 <p className="footer__user-name heading-h3">{t('footer.user-name')}</p>
@@ -67,7 +67,7 @@ function Footer() {
             <ul className="footer__social flex">
               {social.map((item, index) => {
                 return (
-                  <li className="footer__social-item" key={index}>
+                  <li className="footer__social-item" key={index.id}>
                     <Link target="_blank" href={item.href}>
                       <img
                         className="link-with-svg transition-colors w-[42px] h-[42px]"
@@ -90,7 +90,7 @@ function Footer() {
               return (
                 <li
                   className="fotter__menu-item transition-colors hover:text-primary-light mt-sm sm:mt-0 sm:ml-lg"
-                  key={index}
+                  key={index.id}
                 >
                   <Link href={item.href}>{item.text}</Link>
                 </li>

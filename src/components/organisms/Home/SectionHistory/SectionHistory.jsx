@@ -32,7 +32,7 @@ function SectionHistory() {
           <div className="history__timeline flex flex-wrap flex-60">
             {history.map((item, index) => {
               return (
-                <div className="history__timeline-item flex-50 p-[10px]" key={index}>
+                <div className="history__timeline-item flex-50 p-[10px]" key={index.id}>
                   <h3 className="history__timeline-year heading-h3 text-primary-dark">
                     {item.year}
                   </h3>

@@ -1,11 +1,11 @@
 import React from 'react';
+import { useTranslation } from 'next-i18next';
 import { Link } from '../../../atoms';
 
 import site_1 from '../../../../assets/images/illustrations/site-1.jpg';
 import site_2 from '../../../../assets/images/illustrations/site-2.jpg';
 import site_3 from '../../../../assets/images/illustrations/site-3.jpg';
 import site_4 from '../../../../assets/images/illustrations/site-4.jpg';
-import { useTranslation } from 'next-i18next';
 
 function SectionMyWork() {
   const { t } = useTranslation('home');
