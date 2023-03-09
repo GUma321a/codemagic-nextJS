@@ -65,9 +65,9 @@ function Footer() {
               </div>
             </div>
             <ul className="footer__social flex">
-              {social.map((item, index) => {
+              {social.map((item) => {
                 return (
-                  <li className="footer__social-item" key={index.id}>
+                  <li className="footer__social-item" key={item.alt}>
                     <Link target="_blank" href={item.href}>
                       <img
                         className="link-with-svg transition-colors w-[42px] h-[42px]"
@@ -86,11 +86,11 @@ function Footer() {
             CodeMagic @2023
           </div>
           <ul className="footer__menu menu-link text-center flex justify-center flex-col sm:flex-row">
-            {menu.map((item, index) => {
+            {menu.map((item) => {
               return (
                 <li
-                  className="fotter__menu-item transition-colors hover:text-primary-light mt-sm sm:mt-0 sm:ml-lg"
-                  key={index.id}
+                  key={item.text}
+                  className="footer__menu-item transition-colors hover:text-primary-light mt-sm sm:mt-0 sm:ml-lg"
                 >
                   <Link href={item.href}>{item.text}</Link>
                 </li>

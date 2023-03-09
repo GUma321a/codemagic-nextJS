@@ -24,5 +24,8 @@ LinkComponent.propTypes = {
   children: pt.string,
   skipLocaleHandling: pt.bool,
 };
+Link.defaultProps = {
+  children: '',
+};
 
 export default LinkComponent;

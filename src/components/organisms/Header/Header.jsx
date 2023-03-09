@@ -78,9 +78,9 @@ function Header() {
                 )} */}
             </div>
             <ul className="header__menu-list flex z-100 fixed flex-col right-0 top-0 bottom-0 left-full w-full h-full bg-third-dark pt-80 m-0 p-0 justify-start text-left transition-all duration-300 overflow-x-hidden overflow-y-auto overscroll-y-contain pt-120px px-md lg:z-1 lg:static lg:flex-row lg:bg-transparent lg:overflow-x-visible lg:pt-0 lg:px-0">
-              {menu.map((item, index) => {
+              {menu.map((item) => {
                 return (
-                  <li className="header__menu-list-item mr-xl" key={index.id}>
+                  <li className="header__menu-list-item mr-xl" key={item.text}>
                     <Link
                       className="header__menu-list-link menu-link py-md border-b-gray-200 border-b w-full transition-colors hover:text-primary-light lg:py-0 lg:border-none"
                       href={item.href}
