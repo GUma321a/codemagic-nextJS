@@ -1,4 +1,5 @@
 import React from 'react';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 
 import about_1 from '../../../../assets/images/illustrations/about-1.jpg';
@@ -49,6 +50,15 @@ function About() {
       </div>
     </section>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common', 'about'])),
+      // Will be passed to the page component as props
+    },
+  };
 }
 
 export default About;

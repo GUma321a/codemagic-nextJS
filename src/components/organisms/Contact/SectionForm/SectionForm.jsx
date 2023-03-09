@@ -1,4 +1,5 @@
 import React from 'react';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import Form from '../../../atoms/Telegram';
 
@@ -59,6 +60,15 @@ function SectionForm() {
       </div>
     </section>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common', 'contact'])),
+      // Will be passed to the page component as props
+    },
+  };
 }
 
 export default SectionForm;

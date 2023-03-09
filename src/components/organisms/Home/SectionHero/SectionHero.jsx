@@ -1,5 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 import { Link } from '../../../atoms';
 
 import photo from '../../../../assets/images/photos/preview-photo.jpg';
@@ -46,6 +48,15 @@ function SectionHero() {
       </div>
     </section>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common', 'home'])),
+      // Will be passed to the page component as props
+    },
+  };
 }
 
 export default SectionHero;
