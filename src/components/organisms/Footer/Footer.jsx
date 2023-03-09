@@ -1,5 +1,4 @@
 import React from 'react';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import { Link } from '../../atoms';
 
@@ -101,15 +100,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
-
-export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['common'])),
-      // Will be passed to the page component as props
-    },
-  };
 }
 
 export default Footer;

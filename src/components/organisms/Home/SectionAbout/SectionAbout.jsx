@@ -1,6 +1,5 @@
 import React from 'react';
 import { useTranslation } from 'next-i18next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import { Link } from '../../../atoms';
 
@@ -57,15 +56,6 @@ function SectionAbout() {
       </div>
     </section>
   );
-}
-
-export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['common', 'home'])),
-      // Will be passed to the page component as props
-    },
-  };
 }
 
 export default SectionAbout;

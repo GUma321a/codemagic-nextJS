@@ -21,11 +21,8 @@ function LinkComponent({ children, skipLocaleHandling, ...rest }) {
 }
 
 LinkComponent.propTypes = {
-  children: pt.string,
+  children: pt.node,
   skipLocaleHandling: pt.bool,
-};
-Link.defaultProps = {
-  children: '',
 };
 
 export default LinkComponent;

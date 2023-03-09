@@ -1,5 +1,4 @@
 import React from 'react';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import { useTranslation } from 'next-i18next';
 
@@ -38,15 +37,6 @@ function SectionSkills() {
       </div>
     </section>
   );
-}
-
-export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['common', 'home'])),
-      // Will be passed to the page component as props
-    },
-  };
 }
 
 export default SectionSkills;

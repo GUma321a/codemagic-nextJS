@@ -1,6 +1,5 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import LanguageSwitchLink from '../../../../LanguageSwitchLink';
 import i18nextConfig from '../../../../next-i18next.config';
@@ -99,15 +98,6 @@ function Header() {
       </div>
     </header>
   );
-}
-
-export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['common'])),
-      // Will be passed to the page component as props
-    },
-  };
 }
 
 export default Header;
