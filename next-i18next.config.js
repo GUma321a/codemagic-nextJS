@@ -13,7 +13,7 @@ module.exports = {
   // https://www.i18next.com/overview/configuration-options#logging
   debug: false,
   i18n: {
-    defaultLocale: 'en',
+    defaultLocale: 'ua',
     locales: ['en', 'ua'],
     localeDetection: true,
   },
