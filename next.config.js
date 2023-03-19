@@ -14,7 +14,7 @@ module.exports = {
   // i18n,
   webpack5: true,
   webpack: (config) => {
-    config.resolve.fallback = { fs: false };
+    config.resolve.fallback = { fs: false, tls: false };
 
     return config;
   },

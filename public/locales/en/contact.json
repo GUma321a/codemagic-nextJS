@@ -5,5 +5,6 @@
   "form__email": "E-mail",
   "form__message": "Message",
   "button": "Start a Project",
-  "button__success": "Message Sent!"
+  "button__success": "Message Sent!",
+  "button__error": "Message Not Sent!"
 }

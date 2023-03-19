@@ -49,12 +49,21 @@
   @apply inline-block;
 }
 
-.form-status.success .send-text {
+.form-status.success .send-text,
+.form-status.error .send-text {
   @apply hidden;
 }
 
 .form-status.success {
   @apply bg-system-success;
+}
+
+.form-status.error {
+  @apply bg-system-error;
+}
+
+.form-status.error .error-text {
+  @apply block;
 }
 
 .header__language.is-visible .header__language-menu {

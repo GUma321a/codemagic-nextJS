@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { useTranslation } from 'next-i18next';
-
-const TELEGRAM_API_URL =
-  'https://api.telegram.org/bot5572452932:AAEqjC4_b6ZKHRJyBeTCK0iQxVowJ_qiUVA/sendMessage';
 
 function Form() {
   const { t } = useTranslation('contact');
@@ -11,34 +7,41 @@ function Form() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [successButton, setSuccessButton] = useState(false);
+  const [errorButton, setErrorButton] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const formData = new FormData();
-    formData.append('Name', name);
-    formData.append('Email', email);
-    formData.append('Message', message);
-
-    try {
-      await axios.post(TELEGRAM_API_URL, formData);
-      alert('Message sent!');
-    } catch (error) {
-      console.error(error);
-      alert('Message failed to send.');
+    const chatId = '-780517028';
+    const token = '5572452932:AAEqjC4_b6ZKHRJyBeTCK0iQxVowJ_qiUVA';
+    const telegramformtitle = e.target.getAttribute('formtitle');
+    const text = `New request from ${telegramformtitle}\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
+    const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(
+      text
+    )}`;
+    const response = await fetch(url);
+    if (response.ok) {
+      setSuccessButton(true);
+      setTimeout(() => {
+        setSuccessButton(false);
+      }, 3000);
+      setName('');
+      setEmail('');
+      setMessage('');
+    } else {
+      setErrorButton(true);
+      setTimeout(() => {
+        setErrorButton(false);
+      }, 3000);
     }
-
-    setName('');
-    setEmail('');
-    setMessage('');
   };
 
   return (
     <form
       className="contact-form__form telegram-form"
       method="POST"
-      // names="Name Email Message"
-      // formTitle="Contact Form"
       onSubmit={handleSubmit}
+      formtitle="Contact Form"
     >
       <div className="contact__form-inner mb-lg">
         <p className="contact__form-title text-gray-200 mb-[12px]">{t('form__name')}</p>
@@ -69,6 +72,7 @@ function Form() {
         <textarea
           className="w-full border-solid border-b border-gray-500 p-[10px] resize-none hover:border-primary-light focus:border-primary-light h-auto"
           name="Message"
+          type="message"
           placeholder="Type your message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
@@ -77,10 +81,15 @@ function Form() {
       </div>
       <button
         type="submit"
-        className=" contact-form__button inline-block mt-xl button-cta-m form-status"
+        className={`${
+          successButton ? 'success' : ''
+        } contact-form__button inline-block mt-xl button-cta-m form-status ${
+          errorButton ? 'error' : ''
+        }`}
       >
         <span className="send-text">{t('button')}</span>
         <span className="success-text">{t('button__success')}</span>
+        <span className="error-text hidden">{t('button__error')}</span>
       </button>
     </form>
   );
