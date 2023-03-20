@@ -25,13 +25,7 @@ const LanguageSwitchLink = ({ locale, ...rest }) => {
   };
 
   return (
-    <div className="header__language mr-md relative cursor-pointer pr-md lg:pr-md">
-      {/* <Link href={href}>
-        <button className="header__language" onClick={() => languageDetector.cache(locale)}>
-          {locale}
-        </button>
-      </Link> */}
-
+    <div className="header__language cursor-pointer">
       <p
         className="header__language-trigger text-24 relative after:absolute after:bg-[url('../images/decor/arrow-down-mobile.svg')]  after:transition-all after:w-[15px] after:h-[10px] after:bg-no-repeat after:top-[37%] after:translate-y-[-50%] after:left-[120%]"
         onClick={languageMenu}
@@ -39,7 +33,7 @@ const LanguageSwitchLink = ({ locale, ...rest }) => {
         {locale}
       </p>
       {open && (
-        <div className="header__language-menu">
+        <div className="header__language-menu absolute">
           <Link
             href="/"
             locale="ua"

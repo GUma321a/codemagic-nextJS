@@ -29,22 +29,22 @@ function Head({ title, description }) {
   const linkTags = [
     {
       rel: 'icon',
-      href: url('favicon.ico'),
+      href: url('favicon/favicon.ico'),
       sizes: 'any',
     },
     {
       rel: 'icon',
-      href: url('icon.svg'),
+      href: url('favicon/icon.svg'),
       type: 'image/svg+xml',
     },
     {
       rel: 'apple-touch-icon',
-      href: url('apple-touch-icon.png'),
+      href: url('favicon/apple-touch-icon.png'),
       sizes: '180x180',
     },
     {
       rel: 'manifest',
-      href: url('site.webmanifest'),
+      href: url('favicon/site.webmanifest'),
     },
   ];
 
