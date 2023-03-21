@@ -14,8 +14,8 @@ function Form() {
     e.preventDefault();
     const chatId = '-780517028';
     const token = '5572452932:AAEqjC4_b6ZKHRJyBeTCK0iQxVowJ_qiUVA';
-    const telegramformtitle = e.target.getAttribute('formtitle');
-    const text = `New request from ${telegramformtitle}\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
+    const telegramformtitle = e.target.getAttribute('action');
+    const text = `New request from: ${telegramformtitle}\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
     const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(
       text
     )}`;
@@ -41,7 +41,7 @@ function Form() {
       className="contact-form__form telegram-form"
       method="POST"
       onSubmit={handleSubmit}
-      formtitle="Contact Form"
+      action="Contact Form"
     >
       <div className="contact__form-inner mb-lg">
         <p className="contact__form-title text-gray-200 mb-[12px]">{t('form__name')}</p>

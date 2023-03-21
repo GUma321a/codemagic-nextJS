@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
-import LanguageSwitchLink from '../../../../LanguageSwitchLink';
+import LanguageSwitchLink from '../../molecules/LanguageSwitchLink';
 import i18nextConfig from '../../../../next-i18next.config';
 
 import { Link } from '../../atoms';
@@ -40,7 +40,7 @@ function Header() {
               {/* -----------------------Language Button---------------- */}
               <div className="flex">
                 {i18nextConfig.i18n.locales.map((locale) => {
-                  if (locale === currentLocale) return null;
+                  if (locale === currentLocale) return [];
                   return <LanguageSwitchLink locale={locale} key={locale} />;
                 })}
               </div>

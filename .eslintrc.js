@@ -15,6 +15,7 @@ module.exports = {
   plugins: ['react'],
   rules: {
     camelcase: 'off',
+    'no-param-reassign': 0,
     'import/prefer-default-export': 'off',
     'no-underscore-dangle': 'off',
     'react/require-default-props': 'off',
