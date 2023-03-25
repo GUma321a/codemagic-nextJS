@@ -1,5 +1,4 @@
 @layer components {
-
   /* Typography */
   .heading-h1 {
     @apply font-primary font-semibold text-32 leading-127 tracking-tight sm:text-40 md:text-[56px] lg:text-[62px] xl:text-[72px];
@@ -16,7 +15,6 @@
   .heading-h4 {
     @apply font-secondary font-medium text-16 sm:text-20 leading-145;
   }
-
 
   .body-text-l {
     @apply font-primary font-normal text-16 sm:text-18 md:text-20 leading-160;
@@ -46,8 +44,6 @@
     @apply font-secondary font-medium text-16 leading-150;
   }
 
-
-
   /* Buttons */
   .button-cta-m {
     @apply button-link-s text-center text-white duration-[0.2s] bg-primary-light rounded-43 py-[14px] px-md md:py-[17px] md:px-2xl hover:bg-primary-dark focus:bg-primary-dark;
@@ -58,9 +54,9 @@
   }
 
   .button-link-arrow::after {
-    -webkit-mask:url(../images/icons/link-arrow.svg) no-repeat 50% 50%;
-    mask:url(../images/icons/link-arrow.svg) no-repeat 50% 50%;
-    -webkit-mask-size:cover;
-    mask-size:cover;
+    -webkit-mask: url(../images/icons/link-arrow.svg) no-repeat 50% 50%;
+    mask: url(../images/icons/link-arrow.svg) no-repeat 50% 50%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
   }
 }

@@ -15,7 +15,7 @@ function Form() {
     const chatId = '-780517028';
     const token = '5572452932:AAEqjC4_b6ZKHRJyBeTCK0iQxVowJ_qiUVA';
     const telegramformtitle = e.target.getAttribute('action');
-    const text = `New request from: ${telegramformtitle}\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
+    const text = `New request from: ${telegramformtitle}\nName: ${name}\nE-mail: ${email}\nMessage: ${message}`;
     const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(
       text
     )}`;
