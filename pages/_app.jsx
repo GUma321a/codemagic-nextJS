@@ -1,8 +1,6 @@
 import React from 'react';
 import pt from 'prop-types';
-
 import { appWithTranslation } from 'next-i18next';
-
 import Head from '../src/components/molecules/Head';
 import Layout from '../src/components/templates/Layout';
 

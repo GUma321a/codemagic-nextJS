@@ -7,9 +7,9 @@ import Footer from '../organisms/Footer';
 function Layout({ children }) {
   return (
     <>
-      <div className="p-3">
+      <div className="flex flex-col justify-between">
         <Header />
-        <main className="my-2">{children}</main>
+        <main>{children}</main>
       </div>
       <Footer />
     </>

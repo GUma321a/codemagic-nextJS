@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'next-i18next';
 
 import { Link } from '../../../atoms';
+import Image from '../../../atoms/Image';
 
 import about_1 from '../../../../assets/images/illustrations/about-1.jpg';
 import about_2 from '../../../../assets/images/illustrations/about-2.jpg';
@@ -29,25 +30,25 @@ function SectionAbout() {
         </div>
         <div className="about__images grid grid-cols-1 gap-sm md:grid-cols-2 lg:grid-cols-3">
           <div className="about__image max-h-[500px]">
-            <img
+            <Image
               className="max-h-[160px] w-full 450:max-h-[200px] md:max-h-[500px]"
-              src={about_1.src}
+              src={about_1}
               alt="about"
               loading="lazy"
             />
           </div>
           <div className="about__image max-h-[500px]">
-            <img
+            <Image
               className="max-h-[160px] w-full 450:max-h-[200px] md:max-h-[500px]"
-              src={about_2.src}
+              src={about_2}
               alt="about"
               loading="lazy"
             />
           </div>
           <div className="about__image max-h-[500px] md:col-span-2 lg:col-auto">
-            <img
+            <Image
               className="max-h-[160px] w-full 450:max-h-[200px] md:max-h-[500px]"
-              src={about_3.src}
+              src={about_3}
               alt="about"
               loading="lazy"
             />

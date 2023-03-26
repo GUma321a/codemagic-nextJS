@@ -1,11 +1,13 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
-import LanguageSwitchLink from '../../molecules/LanguageSwitchLink';
-import i18nextConfig from '../../../../next-i18next.config';
 
+import LanguageSwitchLink from '../../molecules/LanguageSwitchLink';
 import { Link } from '../../atoms';
+
 import logo from '../../../assets/images/logo.svg';
+
+import i18nextConfig from '../../../../next-i18next.config';
 
 function Header() {
   const { t } = useTranslation('common');
