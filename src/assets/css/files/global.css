@@ -78,6 +78,15 @@
   @apply ml-sm;
 }
 
+.preloader-hidden .preloader {
+  /* transition: 0.3s opacity;
+  opacity: 0; */
+  @apply opacity-0 duration-[3000];
+}
+.loaded .preloader {
+  @apply hidden;
+}
+
 /* .header__language-trigger::after{
   transform: translateY(-50%);
 } */

@@ -1,3 +1,4 @@
+const { transform } = require('lodash');
 const plugin = require('tailwindcss/plugin');
 
 module.exports = {
@@ -94,6 +95,15 @@ module.exports = {
     },
 
     extend: {
+      keyframes: {
+        preloader: {
+          '0%, 80%, 100%': { transform: 'scale(0)' },
+          '40%': { transform: 'scale(1)' },
+        },
+      },
+      animation: {
+        preloader: 'preloader 1s ease-in-out infinite',
+      },
       flex: {
         27: '1 1 27%',
         30: '0 1 30%',
@@ -135,8 +145,13 @@ module.exports = {
         160: '160px',
       },
     },
+    animationDelay: {
+      16: '0.16s',
+      32: '0.32s',
+    },
   },
   plugins: [
+    require('tailwindcss-animation-delay'),
     plugin(({ addComponents, theme, addUtilities }) => {
       addComponents({}),
         addUtilities({

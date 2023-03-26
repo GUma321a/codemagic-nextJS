@@ -59,4 +59,15 @@
     -webkit-mask-size: cover;
     mask-size: cover;
   }
+
+  /* Preloader */
+  .preloader__circle {
+    @apply w-[20px] h-[20px] bg-primary-light rounded-[50%] animate-preloader;
+  }
+  .preloader__circle + .preloader__circle {
+    @apply ml-[8px];
+  }
+  .preloader-hidden .preloader {
+    @apply transition-opacity;
+  }
 }
