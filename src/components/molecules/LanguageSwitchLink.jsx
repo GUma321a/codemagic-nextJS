@@ -8,7 +8,6 @@ import i18nextConfig from '../../../next-i18next.config';
 
 function LanguageSwitchLink({ locale, ...rest }) {
   const router = useRouter();
-  // const [curLocale, setCurLocale] = React.useState('en');
   const currentLocale = router.query.locale || i18nextConfig.i18n.defaultLocale;
 
   /* eslint-disable no-unused-vars */

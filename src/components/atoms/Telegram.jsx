@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'next-i18next';
 
-function Form() {
+function Form(props) {
   const { t } = useTranslation('contact');
 
   const [name, setName] = useState('');
@@ -14,9 +14,9 @@ function Form() {
     e.preventDefault();
     const chatId = '-780517028';
     const token = '5572452932:AAEqjC4_b6ZKHRJyBeTCK0iQxVowJ_qiUVA';
-    const telegramformtitle = e.target.getAttribute('action');
-    const text = `New request from: ${telegramformtitle}\nName: ${name}\nE-mail: ${email}\nMessage: ${message}`;
-    const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(
+    const telegramFormTitle = e.target.getAttribute('action');
+    const text = `<b>New request from:</b> ${telegramFormTitle}\n<b>Name:</b> ${name}\n<b>E-mail:</b> ${email}\n<b>Message:</b> ${message}`;
+    const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&parse_mode=HTML&text=${encodeURIComponent(
       text
     )}`;
     const response = await fetch(url);
@@ -41,7 +41,7 @@ function Form() {
       className="contact-form__form telegram-form"
       method="POST"
       onSubmit={handleSubmit}
-      action="Contact Form"
+      {...props}
     >
       <div className="contact__form-inner mb-lg">
         <p className="contact__form-title text-gray-200 mb-[12px]">{t('form__name')}</p>
@@ -96,3 +96,7 @@ function Form() {
 }
 
 export default Form;
+
+Form.defaultProps = {
+  action: 'Form',
+};

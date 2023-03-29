@@ -11,7 +11,7 @@ function SectionForm() {
         <div className="caption-wrapper max-w-[624px] mx-auto">
           <p className="contact__caption caption-s">{t('caption')}</p>
           <h2 className="contact__title heading-h2 mb-md">{t('title')}</h2>
-          <Form />
+          <Form action="Contact Form" />
         </div>
       </div>
     </section>
