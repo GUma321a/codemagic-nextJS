@@ -87,6 +87,28 @@
   @apply hidden;
 }
 
+.projects__item {
+  @apply lg:relative lg:top-[-96px];
+}
+
+.projects__item + .projects__item {
+  @apply mt-lg lg:mt-0;
+}
+
+.projects__item--big {
+  @apply h-[450px];
+}
+
+.projects__item:nth-child(1),
+.projects__item:nth-child(2),
+.projects__item:nth-child(4) {
+  @apply lg:top-0;
+}
+
+.card__item + .card__item {
+  @apply mt-md lg:mt-0;
+}
+
 /* .header__language-trigger::after{
   transform: translateY(-50%);
 } */

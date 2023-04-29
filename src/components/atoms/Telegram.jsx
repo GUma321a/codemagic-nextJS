@@ -49,7 +49,7 @@ function Form(props) {
           className="w-full border-solid border-b border-gray-500 p-[10px] hover:border-primary-light focus:border-primary-light"
           type="text"
           name="Name"
-          placeholder="John"
+          placeholder={t('placeholder__name')}
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
@@ -61,7 +61,7 @@ function Form(props) {
           className="w-full border-solid border-b border-gray-500 p-[10px] hover:border-primary-light focus:border-primary-light"
           type="email"
           name="Email"
-          placeholder="E-mail"
+          placeholder={t('placeholder__email')}
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -73,7 +73,7 @@ function Form(props) {
           className="w-full border-solid border-b border-gray-500 p-[10px] resize-none hover:border-primary-light focus:border-primary-light h-auto"
           name="Message"
           type="message"
-          placeholder="Type your message"
+          placeholder={t('placeholder__message')}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           required

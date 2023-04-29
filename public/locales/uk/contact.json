@@ -2,8 +2,11 @@
   "caption": "Зв'язок зі мною",
   "title": "Давайте щось побудуємо разом... Зв'яжіться зі мною.",
   "form__name": "Ім'я",
+  "placeholder__name": "Джон",
   "form__email": "Пошта",
+  "placeholder__email": "Пошта",
   "form__message": "Повідомлення",
+  "placeholder__message": "Напишіть ваше повідомлення",
   "button": "Почати проєкт",
   "button__success": "Повідомлення відправлено!",
   "button__error": "Повідомлення не відправлено!"

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
+import axios from 'axios';
 
 import LanguageSwitchLink from '../../molecules/LanguageSwitchLink';
 import { Link } from '../../atoms';
@@ -28,6 +29,18 @@ function Header() {
     },
   ];
 
+  const [info, setInfo] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await axios.get('https://russianwarship.rip/api/v2/statistics/latest');
+      setInfo(res.data);
+    };
+    fetchData();
+  }, []);
+
+  // console.log(info.data.stats.personnel_units);
+
   return (
     <header className="header sticky bg-third-light py-[20px] inset-x-0 top-0 z-50">
       <div className="header__container mx-auto w-full px-sm lg:px-md xl:px-2xl">
@@ -37,6 +50,7 @@ function Header() {
               <img className="max-w-full" src={logo.src} alt="Logo" loading="lazy" />
             </Link>
           </div>
+          {/* <div className="test">Загиблі свинособаки: {info.data.stats.personnel_units}</div> */}
           <nav className="header__menu flex">
             <div className="header__language mr-md relative cursor-pointer pr-md lg:pr-md">
               {/* -----------------------Language Button---------------- */}

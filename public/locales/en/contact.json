@@ -2,8 +2,11 @@
   "caption": "Contact Me",
   "title": "Let's build something together... Get in touch with me.",
   "form__name": "Name",
+  "placeholder__name": "John",
   "form__email": "E-mail",
+  "placeholder__email": "E-mail",
   "form__message": "Message",
+  "placeholder__message": "Type your message",
   "button": "Start a Project",
   "button__success": "Message Sent!",
   "button__error": "Message Not Sent!"
