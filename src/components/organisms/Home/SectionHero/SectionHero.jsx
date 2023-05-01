@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'next-i18next';
 
-import { Link } from '../../../atoms';
+import { Link, Button, Title } from '../../../atoms';
 
 import photo from '../../../../assets/images/photos/preview-photo.jpg';
 
@@ -14,13 +14,14 @@ function SectionHero() {
         <div className="hero__wrapper lg:flex lg:justify-between lg:gap-[78px]">
           <div className="hero__info lg:flex-65">
             <p className="hero__info-subtitle caption-s uppercase">{t('hero.subtitle')}</p>
-            <h1 className="hero__info-title heading-h1 mb-md">{t('hero.title')}</h1>
+            <Title size="h1" className="hero__info-title heading-h1 mb-md" text={t('hero.title')} />
             <p className="hero__info-text body-text-l mb-xl">{t('hero.text')}</p>
-            <div className="hero__info-button flex justify-center lg:justify-start">
-              <Link className="button-cta-m " href="/contact">
-                {t('hero.info-button')}
-              </Link>
-            </div>
+            <Button
+              size="m"
+              link="/contact"
+              wrapperClass="hero__info-button flex justify-center lg:justify-start"
+              text={t('hero.info-button')}
+            />
           </div>
           <div className="hero__image flex flex-col items-center mt-md lg:flex-30">
             <div className="hero__image-photo mb-sm lg:mb-md">

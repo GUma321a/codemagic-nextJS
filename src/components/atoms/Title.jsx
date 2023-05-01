@@ -15,8 +15,7 @@ function Title({ children, text, size, className, ...props }) {
     if (size === 'h1') return 'heading-h1';
     if (size === 'h2') return 'heading-h2';
     if (size === 'h3') return 'heading-h3';
-    if (size === 'h4') return 'heading-h4';
-    if (size === 'h5') return 'heading-h5';
+    if (size === 'h3') return 'heading-h4';
     return '';
   };
 

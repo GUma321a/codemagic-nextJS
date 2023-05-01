@@ -45,7 +45,10 @@ function Footer() {
               {t('footer.text-subtitle')}
             </p>
             <p className="footer__text-mail heading-h4 text-gray-300 hover:text-white transition-colors">
-              <Link href="mailto:alexandrchernicov@gmail.com">alexandrchernicov@gmail.com</Link>
+              <Link
+                href="mailto:alexandrchernicov@gmail.com"
+                content="alexandrchernicov@gmail.com"
+              />
             </p>
           </div>
           <div className="footer__user">
@@ -91,7 +94,7 @@ function Footer() {
                   key={item.text}
                   className="footer__menu-item transition-colors hover:text-primary-light mt-sm sm:mt-0 sm:ml-lg"
                 >
-                  <Link href={item.href}>{item.text}</Link>
+                  <Link href={item.href} content={item.text} />
                 </li>
               );
             })}

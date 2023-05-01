@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
-import axios from 'axios';
 
 import LanguageSwitchLink from '../../molecules/LanguageSwitchLink';
 import { Link } from '../../atoms';
@@ -28,18 +27,6 @@ function Header() {
       href: '/contact',
     },
   ];
-
-  const [info, setInfo] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await axios.get('https://russianwarship.rip/api/v2/statistics/latest');
-      setInfo(res.data);
-    };
-    fetchData();
-  }, []);
-
-  // console.log(info.data.stats.personnel_units);
 
   return (
     <header className="header sticky bg-third-light py-[20px] inset-x-0 top-0 z-50">

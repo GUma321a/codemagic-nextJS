@@ -3,7 +3,7 @@ import pt from 'prop-types';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-function LinkComponent({ children, skipLocaleHandling, ...rest }) {
+function LinkComponent({ children, skipLocaleHandling, content, ...rest }) {
   const router = useRouter();
   const locale = rest.locale || router.query.locale || '';
 
@@ -15,12 +15,13 @@ function LinkComponent({ children, skipLocaleHandling, ...rest }) {
 
   return (
     <Link href={href} legacyBehavior>
-      <a {...rest}>{children}</a>
+      <a {...rest}>{children || content}</a>
     </Link>
   );
 }
 
 LinkComponent.propTypes = {
+  content: pt.string,
   children: pt.node,
   skipLocaleHandling: pt.bool,
 };

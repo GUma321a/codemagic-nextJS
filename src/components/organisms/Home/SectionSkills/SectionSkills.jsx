@@ -1,6 +1,9 @@
 import React from 'react';
 
 import { useTranslation } from 'next-i18next';
+import Section from '../../../templates/Section';
+import Title from '../../../atoms/Title';
+import Info from '../../../templates/Info';
 
 function SectionSkills() {
   const { t } = useTranslation('home');
@@ -15,27 +18,27 @@ function SectionSkills() {
   ];
 
   return (
-    <section className="services my-60 text-center lg:text-start lg:my-160">
-      <div className="container">
-        <div className="services__wrapper md:flex md:justify-between">
-          <h2 className="services__title heading-h2 text-gray-300 mb-xl lg:mb-0">
-            {t('skills.title')}
-          </h2>
-          <div className="services__inner flex-60 flex flex-col flex-wrap text-gray-500 md:flex-row md:gap-xl">
-            {services.map((item) => {
-              return (
-                <p
-                  className="services__subtitle heading-h3 flex-100 flex items-center mt-md justify-start pl-[65px] relative before:absolute before:w-lg before:h-lg before:bg-[url('../images/decor/services-icon.svg')] before:left-0 before:top-1/2 before:-translate-y-1/2 md:mt-0 lg:flex-[40%]"
-                  key={item.text}
-                >
-                  {item.text}
-                </p>
-              );
-            })}
-          </div>
+    <Section className="services text-center lg:text-start">
+      <Info className="services__wrapper">
+        <Title
+          size="h2"
+          className="services__title text-gray-300 mb-xl lg:mb-0"
+          text={t('skills.title')}
+        />
+        <div className="services__inner flex-60 flex flex-col flex-wrap text-gray-500 md:flex-row md:gap-xl">
+          {services.map((item) => {
+            return (
+              <Title
+                size="h3"
+                className="services__subtitle services__subtitle--before  flex-100 flex items-center mt-md justify-start pl-[65px]  md:mt-0 lg:flex-[40%]"
+                key={item.text}
+                text={item.text}
+              />
+            );
+          })}
         </div>
-      </div>
-    </section>
+      </Info>
+    </Section>
   );
 }
 

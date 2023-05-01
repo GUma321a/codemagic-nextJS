@@ -1,6 +1,11 @@
 import React from 'react';
-
 import { useTranslation } from 'next-i18next';
+
+import Title from '../../../atoms/Title';
+
+import Info from '../../../templates/Info';
+
+import Section from '../../../templates/Section';
 
 function SectionHistory() {
   const { t } = useTranslation('home');
@@ -24,29 +29,33 @@ function SectionHistory() {
   ];
 
   return (
-    <section className="history bg-third-dark py-2xl md:py-[128px] my-60 lg:my-160">
-      <div className="container">
-        <div className="history__wrapper md:flex justify-between">
-          <div className="history__info mb-md md:mb-lg flex-30">
-            <h2 className="history__title heading-h2 mb-sm">{t('history.title')}</h2>
-          </div>
-          <div className="history__timeline flex flex-wrap flex-60">
-            {history.map((item) => {
-              return (
-                <div className="history__timeline-item flex-50 p-[10px]" key={item.text}>
-                  <h3 className="history__timeline-year heading-h3 text-primary-dark">
-                    {item.year}
-                  </h3>
-                  <h4 className="history__timeline-text heading-h4 text-secondary-dark">
-                    {item.text}
-                  </h4>
-                </div>
-              );
-            })}
-          </div>
+    <Section className="history bg-third-dark py-2xl md:py-[128px]">
+      <Info className="history__wrapper">
+        <Title
+          className="history__title mb-md flex-30 md:mb-lg"
+          size="h2"
+          text={t('history.title')}
+        />
+        <div className="history__timeline flex flex-wrap flex-60">
+          {history.map((item) => {
+            return (
+              <div className="history__timeline-item flex-50 p-[10px]" key={item.text}>
+                <Title
+                  className="history__timeline-year text-primary-dark"
+                  size="h3"
+                  text={item.year}
+                />
+                <Title
+                  className="history__timeline-text text-secondary-dark"
+                  size="h4"
+                  text={item.text}
+                />
+              </div>
+            );
+          })}
         </div>
-      </div>
-    </section>
+      </Info>
+    </Section>
   );
 }
 
