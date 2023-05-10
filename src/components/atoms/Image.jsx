@@ -1,8 +1,9 @@
 import React from 'react';
 import NextImage from 'next/image';
 import { motion, useAnimation } from 'framer-motion';
+import pt from 'prop-types';
 
-function ImageComponent(props) {
+function ImageComponent({ wrapperClass, ...props }) {
   const [loaded, setLoaded] = React.useState(false);
   const motionControls = useAnimation();
 
@@ -30,16 +31,24 @@ function ImageComponent(props) {
   };
 
   return (
-    <motion.span {...motionProps} className="block">
+    <motion.span {...motionProps} className={`block ${wrapperClass}`}>
       <NextImage {...props} onLoadingComplete={onLoadingComplete} />
     </motion.span>
   );
 }
 
+ImageComponent.propTypes = {
+  wrapperClass: pt.string,
+  alt: pt.string,
+  layout: pt.string,
+  lazyBoundary: pt.string,
+};
+
 ImageComponent.defaultProps = {
   alt: '',
   layout: 'responsive',
   lazyBoundary: '1000px',
+  wrapperClass: '',
 };
 
 export default ImageComponent;

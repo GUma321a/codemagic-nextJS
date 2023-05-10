@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'next-i18next';
-import { Link } from '../../atoms';
+import { Image, Link } from '../../atoms';
 
 import photo from '../../../assets/images/photos/preview-photo-mini.jpg';
 import instagram from '../../../assets/images/icons/Instagram.svg';
@@ -71,9 +71,9 @@ function Footer() {
                 return (
                   <li className="footer__social-item" key={item.alt}>
                     <Link target="_blank" href={item.href}>
-                      <img
-                        className="link-with-svg transition-colors w-[42px] h-[42px]"
-                        src={item.src.src}
+                      <Image
+                        src={item.src}
+                        wrapperClass="link-with-svg transition-colors w-[42px] h-[42px]"
                         alt={item.alt}
                       />
                     </Link>

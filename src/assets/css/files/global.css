@@ -113,6 +113,6 @@
   @apply relative before:absolute before:w-lg before:h-lg before:bg-[url('../images/decor/services-icon.svg')] before:left-0 before:top-1/2 before:-translate-y-1/2;
 }
 
-/* .header__language-trigger::after{
-  transform: translateY(-50%);
-} */
+.about__text + .about__text {
+  @apply text-gray-400 mb-md md:mb-lg;
+}

@@ -37,7 +37,6 @@ function Header() {
               <img className="max-w-full" src={logo.src} alt="Logo" loading="lazy" />
             </Link>
           </div>
-          {/* <div className="test">Загиблі свинособаки: {info.data.stats.personnel_units}</div> */}
           <nav className="header__menu flex">
             <div className="header__language mr-md relative cursor-pointer pr-md lg:pr-md">
               {/* -----------------------Language Button---------------- */}

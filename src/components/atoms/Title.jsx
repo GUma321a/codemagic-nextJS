@@ -15,7 +15,7 @@ function Title({ children, text, size, className, ...props }) {
     if (size === 'h1') return 'heading-h1';
     if (size === 'h2') return 'heading-h2';
     if (size === 'h3') return 'heading-h3';
-    if (size === 'h3') return 'heading-h4';
+    if (size === 'h4') return 'heading-h4';
     return '';
   };
 
@@ -29,7 +29,7 @@ function Title({ children, text, size, className, ...props }) {
 Title.propTypes = {
   children: pt.node,
   text: pt.string,
-  size: pt.oneOf(['h5', 'h4', 'h3', 'h2', 'h1']),
+  size: pt.oneOf(['h4', 'h3', 'h2', 'h1']),
   className: pt.string,
 };
 

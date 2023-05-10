@@ -4,18 +4,10 @@ import { useTranslation } from 'next-i18next';
 import Section from '../../../templates/Section';
 import Title from '../../../atoms/Title';
 import Info from '../../../templates/Info';
+import db from './db.json';
 
 function SectionSkills() {
   const { t } = useTranslation('home');
-  const services = [
-    { text: 'HTML, CSS, JS' },
-    { text: 'Tailwind CSS' },
-    { text: 'NextJS' },
-    { text: 'Responsive layout' },
-    { text: 'CSS Animations' },
-    { text: 'GitHub' },
-    { text: 'SCSS' },
-  ];
 
   return (
     <Section className="services text-center lg:text-start">
@@ -26,7 +18,7 @@ function SectionSkills() {
           text={t('skills.title')}
         />
         <div className="services__inner flex-60 flex flex-col flex-wrap text-gray-500 md:flex-row md:gap-xl">
-          {services.map((item) => {
+          {db.services.map((item) => {
             return (
               <Title
                 size="h3"

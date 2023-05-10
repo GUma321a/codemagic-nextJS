@@ -1,0 +1,11 @@
+{
+  "services": [
+    { "text": "HTML, CSS, JS" },
+    { "text": "Tailwind CSS" },
+    { "text": "NextJS" },
+    { "text": "Responsive layout" },
+    { "text": "CSS Animations" },
+    { "text": "GitHub" },
+    { "text": "SCSS" }
+  ]
+}
