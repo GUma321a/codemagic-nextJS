@@ -1,6 +1,8 @@
 import React from 'react';
 import pt from 'prop-types';
 import { appWithTranslation } from 'next-i18next';
+// eslint-disable-next-line import/no-unresolved
+import { Analytics } from '@vercel/analytics/react';
 import Head from '../src/components/molecules/Head';
 import Layout from '../src/components/templates/Layout';
 import Preloader from '../src/components/atoms/Preloader';
@@ -14,6 +16,7 @@ function App({ Component, pageProps }) {
       <Layout>
         <Component {...pageProps} />
       </Layout>
+      <Analytics />
     </>
   );
 }
