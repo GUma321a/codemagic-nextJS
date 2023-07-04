@@ -15,7 +15,7 @@ function LinkComponent({ children, skipLocaleHandling, content, ...rest }) {
 
   return (
     <Link href={href} legacyBehavior>
-      <a {...rest}>{children || content}</a>
+      <a {...rest}>{children}</a>
     </Link>
   );
 }

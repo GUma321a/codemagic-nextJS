@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 
@@ -28,6 +28,11 @@ function Header() {
     },
   ];
 
+  const [isOpen, setIsOpen] = useState(false);
+  const hundleMenuClick = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <header className="header sticky bg-third-light py-[20px] inset-x-0 top-0 z-50">
       <div className="header__container mx-auto w-full px-sm lg:px-md xl:px-2xl">
@@ -48,7 +53,11 @@ function Header() {
               </div>
               {/* -----------------------Language Button---------------- */}
             </div>
-            <ul className="header__menu-list flex z-100 fixed flex-col right-0 top-0 bottom-0 left-full w-full h-full bg-third-dark pt-80 m-0 p-0 justify-start text-left transition-all duration-300 overflow-x-hidden overflow-y-auto overscroll-y-contain pt-120px px-md lg:z-1 lg:static lg:flex-row lg:bg-transparent lg:overflow-x-visible lg:pt-0 lg:px-0">
+            <ul
+              className={`${
+                isOpen ? 'header__menu-list-active' : ''
+              } header__menu-list flex z-100 fixed flex-col right-0 top-0 bottom-0 left-full w-full h-full bg-third-dark pt-80 m-0 p-0 justify-start text-left transition-all duration-300 overflow-x-hidden overflow-y-auto overscroll-y-contain pt-120px px-md lg:z-1 lg:static lg:flex-row lg:bg-transparent lg:overflow-x-visible lg:pt-0 lg:px-0`}
+            >
               {menu.map((item) => {
                 return (
                   <li className="header__menu-list-item mr-xl" key={item.text}>
@@ -63,9 +72,13 @@ function Header() {
               })}
             </ul>
           </nav>
-          <div className="header__burger block relative h-[18px] w-[20px] z-100 cursor-pointer before:absolute after:absolute before:h-[2px] after:h-[2px] before:w-full after:w-full before:bg-white after:bg-white transition-all before:top-0 after:bottom-0 before:duration-300 after:duration-300 before:rounded-71 after:rounded-71 sm:w-[25px] lg:hidden">
+          <button
+            type="button"
+            onClick={hundleMenuClick}
+            className={`${isOpen ? 'active-burger' : ''} header__burger`}
+          >
             <span className="absolute top-xs right-0 w-full bg-white h-[2px] transition-all scale-100 duration-300 rounded-71" />
-          </div>
+          </button>
         </div>
       </div>
     </header>
