@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qargaly</title>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="images/favicons/site.webmanifest" />
+    <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- Open Graph -->
+
+    <!-- Styles -->
+    <style>
+      .preloader {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        background: #fff;
+        z-index: 99999;
+      }
+      .preloader__image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .preloader__circle {
+        width: 20px;
+        height: 20px;
+        background-color: #1c1e53;
+        border-radius: 50%;
+        -webkit-animation: preloader-bounce 1.4s ease-in-out 0s infinite both;
+        animation: preloader-bounce 1.4s ease-in-out 0s infinite both;
+      }
+      .preloader__circle + .preloader__circle {
+        margin-left: 8px;
+      }
+      .preloader__circle--1 {
+        -webkit-animation-delay: -0.32s;
+        animation-delay: -0.32s;
+      }
+      .preloader__circle--2 {
+        -webkit-animation-delay: -0.16s;
+        animation-delay: -0.16s;
+      }
+      .preloader-hidden .preloader {
+        transition: 0.3s opacity;
+        opacity: 0;
+      }
+      .loaded .preloader {
+        display: none;
+      }
+
+      @-webkit-keyframes preloader-bounce {
+        0%,
+        80%,
+        100% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        40% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+      @keyframes preloader-bounce {
+        0%,
+        80%,
+        100% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        40% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="./css/libs.min.css" />
+    <link rel="stylesheet" href="./css/style.min.css" />
+  </head>
+
+  <body>
+    <div class="preloader">
+      <div class="preloader__image">
+        <div class="preloader__circle preloader__circle--1"></div>
+        <div class="preloader__circle preloader__circle--2"></div>
+        <div class="preloader__circle preloader__circle--3"></div>
+      </div>
+    </div>
+
+    <div class="overflow-hidden">
+      <header class="header header-main">
+        <div class="container-fluid">
+          <div class="header__navbar">
+            <nav class="header__menu">
+              <ul class="header__menu-list body-text-medium">
+                <li class="header__menu-list-item"><a class="header__menu-list-link homepage-link" href="#">О НАС</a></li>
+                <li class="header__menu-list-item"><a class="header__menu-list-link" href="#">LIFE ФОТО</a></li>
+                <li class="header__menu-list-item"><a class="header__menu-list-link" href="#">КАК ДОЕХАТЬ</a></li>
+                <li class="header__menu-list-item"><a class="header__menu-list-link" href="/сottages.html">КОТТЕДЖИ</a></li>
+                <li class="header__menu-list-item"><a class="header__menu-list-link" href="#">РЕСТОРАН</a></li>
+                <li class="header__menu-list-item"><a class="header__menu-list-link" href="./reviews.html">ОТЗЫВЫ</a></li>
+                <!-- <li class="header__menu-list-item header__menu-list-item--menu"><a class="header__menu-list-link" href="./contact.html">Contact us</a></li> -->
+              </ul>
+              <!-- <a href="./contact.html" class="header__contact-link button-cta">Contact us</a> -->
+            </nav>
+            <div class="burger__inner">
+              <div class="burger"><span></span></div>
+            </div>
+            <div class="header__logo">
+              <a href="." class="header__logo-link"><img src="./images/illustrations/logo.png" alt="Logo" /></a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="hero">
+          <div class="container">
+            <h1 class="hero__title heading-h1">Отдых на природе, с комфортом квартиры</h1>
+            <p class="hero__text heading-h6">
+              Вокруг лес, еда в номер, сауна. <br />
+              Личный бассейн, джакузи. <br />
+              Всё включено - отдыхай на полную!
+            </p>
+            <div class="hero__btn">
+              <a href="#" class="transperent-buttoon heading-h6">Написать нам</a>
+              <p class="hero__btn-bottom">online</p>
+            </div>
+          </div>
+        </section>
+        <section class="armored">
+          <div class="container">
+            <form class="armored-form">
+              <p class="armored__title heading-h6">Поиск свободных коттеджей</p>
+              <input class="armored__input input-date subtitle-s" type="date" />
+              <input class="armored__input input-date subtitle-s" type="date" />
+              <input class="armored__input subtitle-s" type="text" placeholder="Сколько вас?" />
+              <div class="armored__services">
+                <label class="armored__text label-xl"
+                  >Всё включено -+25000
+                  <input class="armored__checkbox" type="checkbox" id="inclusive" name="inclusive" value="inclusive" />
+                  <span class="armored__castom-checkbox"></span>
+                </label>
+              </div>
+              <div class="armored__services">
+                <label class="armored__text label-xl"
+                  >Подзний заезд (после 12:00)
+                  <input class="armored__checkbox" type="checkbox" id="check-in" name="check-in" value="check-in" />
+                  <span class="armored__castom-checkbox"></span>
+                </label>
+              </div>
+              <button class="armored__btn">
+                <p class="armored__btn-text armored__btn-icon">ИСКАТЬ</p>
+              </button>
+            </form>
+          </div>
+        </section>
+        <section class="card">
+          <div class="container">
+            <h3 class="card__title heading-h2">Ваш личный домик, с небольшой террасой, вокруг лес, и ресторан 24/7</h3>
+            <div class="card__wrapper">
+              <div class="card-item">
+                <p class="card-item__price subtitle-l">40000 тенге/<span>ночь</span></p>
+                <div class="card-item__info">
+                  <p class="card-item__title">Private Villa 3</p>
+                  <p class="card-item__text subtitle-s">Описание дом ика оп лдьфылд вьлдфыьлд вф льдывфы вфыв фывфыв фывыф вфывфывфы</p>
+                  <div class="card-item__btn">
+                    <a href="#" class="card-item__btn-more button-link-arrow">ПОДРОБНЕЕ</a>
+                    <a href="#" class="card-item__btn-armored">ЗАБРОНИРОВАТЬ</a>
+                  </div>
+                  <div class="armored-form-wrapper">
+                    <form class="armored-form">
+                      <p class="armored__title heading-h6">Бронирование</p>
+                      <input class="armored__input input-date subtitle-s" type="date" />
+                      <input class="armored__input input-date subtitle-s" type="date" />
+                      <input class="armored__input subtitle-s" type="text" placeholder="Имя Фамилия" />
+                      <input class="armored__input subtitle-s" type="tel" placeholder="Номер телефона" />
+                      <div class="armored__services">
+                        <label class="armored__text label-xl"
+                          >Всё включено - +25000
+                          <input class="armored__checkbox" type="checkbox" id="inclusive" name="inclusive" value="inclusive" />
+                          <span class="armored__castom-checkbox"></span>
+                        </label>
+                      </div>
+                      <div class="armored__services">
+                        <label class="armored__text label-xl"
+                          >Подзний заезд (после 12:00)
+                          <input class="armored__checkbox" type="checkbox" id="check-in" name="check-in" value="check-in" />
+                          <span class="armored__castom-checkbox"></span>
+                        </label>
+                      </div>
+                      <button class="armored__btn">
+                        <p class="armored__btn-text">ЗАБРОНИРОВАТЬ</p>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-item">
+                <p class="card-item__price subtitle-l">40000 тенге/<span>ночь</span></p>
+                <div class="card-item__info">
+                  <p class="card-item__title">Private Villa 3</p>
+                  <p class="card-item__text subtitle-s">Описание дом ика оп лдьфылд вьлдфыьлд вф льдывфы вфыв фывфыв фывыф вфывфывфы</p>
+                  <div class="card-item__btn">
+                    <a href="#" class="card-item__btn-more button-link-arrow">ПОДРОБНЕЕ</a>
+                    <a href="#" class="card-item__btn-armored">ЗАБРОНИРОВАТЬ</a>
+                  </div>
+                  <div class="armored-form-wrapper">
+                    <form class="armored-form">
+                      <p class="armored__title heading-h6">Бронирование</p>
+                      <input class="armored__input input-date subtitle-s" type="date" />
+                      <input class="armored__input input-date subtitle-s" type="date" />
+                      <input class="armored__input subtitle-s" type="text" placeholder="Имя Фамилия" />
+                      <input class="armored__input subtitle-s" type="tel" placeholder="Номер телефона" />
+                      <div class="armored__services">
+                        <label class="armored__text label-xl"
+                          >Всё включено - +25000
+                          <input class="armored__checkbox" type="checkbox" id="inclusive" name="inclusive" value="inclusive" />
+                          <span class="armored__castom-checkbox"></span>
+                        </label>
+                      </div>
+                      <div class="armored__services">
+                        <label class="armored__text label-xl"
+                          >Подзний заезд (после 12:00)
+                          <input class="armored__checkbox" type="checkbox" id="check-in" name="check-in" value="check-in" />
+                          <span class="armored__castom-checkbox"></span>
+                        </label>
+                      </div>
+                      <button class="armored__btn">
+                        <p class="armored__btn-text">ЗАБРОНИРОВАТЬ</p>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card__show-all subtitle-s">
+              <a href="./cottages.html">СМОТРЕТЬ ВСЕ КОТТЕДЖИ</a>
+            </div>
+          </div>
+        </section>
+        <section class="services">
+          <div class="container">
+            <h4 class="services__title heading-h3">Комфорт & Сервис</h4>
+            <div class="services__inner">
+              <div class="services__item">
+                <p class="services__item-title heading-h4">Подогреваемый бассейн</p>
+                <p class="services__subtitle subtitle-l">Вода в бассейне подогревается до 30-35 градусов, это обеспечивает комфорт в любое время года.</p>
+              </div>
+              <div class="services__item">
+                <p class="services__item-title heading-h4">Высокоскоростной Wi-Fi</p>
+                <p class="services__subtitle subtitle-l">По всей территории комплекта, работает скоростной Wi-Fi до 1000 мб/c</p>
+              </div>
+              <div class="services__item">
+                <p class="services__item-title heading-h4">Парковка</p>
+                <p class="services__subtitle subtitle-l">Ваш автомобиль будет в безопасности, и под видеонаблюдением, для комофртного и безопасного отдыха!</p>
+              </div>
+              <div class="services__item">
+                <p class="services__item-title heading-h4">Ресторан 24/7</p>
+                <p class="services__subtitle subtitle-l">Для наших отдыхающих работает ресторан, заказать доставку еды можно прямо в ваш коттедж.</p>
+              </div>
+              <div class="services__item">
+                <p class="services__item-title heading-h4">SPA - бесплатно</p>
+                <p class="services__subtitle subtitle-l">У нас есть большой Spa-комплекс, с террасой, бассейнами, джакузи, хамамом, и баня на любой вкус</p>
+              </div>
+            </div>
+            <div class="services__icons">
+              <div class="services__icon">
+                <img src="./images/icons/services-icon-1.svg" loading="lazy" alt="icon" />
+              </div>
+              <div class="services__icon">
+                <img src="./images/icons/services-icon-2.svg" loading="lazy" alt="icon" />
+              </div>
+              <div class="services__icon">
+                <img src="./images/icons/services-icon-3.svg" loading="lazy" alt="icon" />
+              </div>
+              <div class="services__icon">
+                <img src="./images/icons/services-icon-4.svg" loading="lazy" alt="icon" />
+              </div>
+              <div class="services__icon">
+                <img src="./images/icons/services-icon-5.svg" loading="lazy" alt="icon" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="faq">
+          <div class="container">
+            <h4 class="faq__title heading-h4">ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h4>
+            <div class="faq__wrapper">
+              <div class="faq__accordion">
+                <div class="faq__accordion-item">
+                  <div class="faq__accordion-trigger heading-h6">
+                    <div class="faq__accordion-trigger-text">Что входит в стоимость?</div>
+                  </div>
+                  <div class="faq__accordion-content">
+                    <div class="faq__accordion-content-text label-l">В стоимость номера входит: проживание, средства личной гигиены, полотенца, тапочки, халат, столовый набор, мини бар, SPA, бассейн, мангал.</div>
+                  </div>
+                </div>
+
+                <div class="faq__accordion-item">
+                  <div class="faq__accordion-trigger heading-h6">
+                    <div class="faq__accordion-trigger-text">Когда заезд и выезд?</div>
+                  </div>
+                  <div class="faq__accordion-content">
+                    <div class="faq__accordion-content-text label-l">В стоимость номера входит: проживание, средства личной гигиены, полотенца, тапочки, халат, столовый набор, мини бар, SPA, бассейн, мангал.</div>
+                  </div>
+                </div>
+
+                <div class="faq__accordion-item">
+                  <div class="faq__accordion-trigger heading-h6">
+                    <div class="faq__accordion-trigger-text">У вас есть ресторан?</div>
+                  </div>
+                  <div class="faq__accordion-content">
+                    <div class="faq__accordion-content-text label-l">Да, у нас есть ресторан. Еду в коттедж можно заказать круглосуточно! В меню вы найдете блюда на любой вкус и бюджет.</div>
+                  </div>
+                </div>
+
+                <div class="faq__accordion-item">
+                  <div class="faq__accordion-trigger heading-h6">
+                    <div class="faq__accordion-trigger-text">Что входит в “Всё велючено” ?</div>
+                  </div>
+                  <div class="faq__accordion-content">
+                    <div class="faq__accordion-content-text label-l">В стоимость номера входит: проживание, средства личной гигиены, полотенца, тапочки, халат, столовый набор, мини бар, SPA, бассейн, мангал.</div>
+                  </div>
+                </div>
+
+                <div class="faq__accordion-item">
+                  <div class="faq__accordion-trigger heading-h6">
+                    <div class="faq__accordion-trigger-text">Как забронировать?</div>
+                  </div>
+                  <div class="faq__accordion-content">
+                    <div class="faq__accordion-content-text label-l">В стоимость номера входит: проживание, средства личной гигиены, полотенца, тапочки, халат, столовый набор, мини бар, SPA, бассейн, мангал.</div>
+                  </div>
+                </div>
+
+                <div class="faq__accordion-item">
+                  <div class="faq__accordion-trigger heading-h6">
+                    <div class="faq__accordion-trigger-text">Что есть на территории?</div>
+                  </div>
+                  <div class="faq__accordion-content">
+                    <div class="faq__accordion-content-text label-l">В стоимость номера входит: проживание, средства личной гигиены, полотенца, тапочки, халат, столовый набор, мини бар, SPA, бассейн, мангал.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="faq__rating">
+            <p class="faq__rating-grade">Оценка: <span>4.9</span></p>
+            <a class="faq__rating-moore heading-h6" href="./reviews.html">Читать отзывы</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer subtitle-s">
+        <div class="container">
+          <h6 class="footer__title heading-h5">Contact Info</h6>
+          <div class="footer__info-wrapper">
+            <div class="footer__info-item subtitle-m">
+              <img src="./images/icons/footer-icon-1.svg" alt="icon" class="footer__info-img" />
+              <p class="footer__info-text">Казахстан, Алматы, турбекова 12a</p>
+            </div>
+            <div class="footer__info-item subtitle-m">
+              <img src="./images/icons/footer-icon-2.svg" alt="icon" class="footer__info-img" />
+              <a href="mailto:qargali-relax@support" class="footer__info-mail">qargali-relax@support</a>
+            </div>
+            <div class="footer__info-item subtitle-m">
+              <img src="./images/icons/footer-icon-3.png" alt="icon" class="footer__info-img" />
+              <a href="tel:+77892199321" class="footer__info-tell">+77892199321 ( клик )</a>
+            </div>
+          </div>
+          <div class="footer__pay">
+            <img class="footer__pay-icon" src="./images/icons/visa.svg" alt="visa" />
+            <img class="footer__pay-icon" src="./images/icons/mastercard.svg" alt="mastercard" />
+          </div>
+          <div class="footer__copy body-text-medium">
+            <p class="footer__copy-text">Все права защищены</p>
+            <p class="footer__copy-text">Разработка - Genius Studio</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./js/main.min.js"></script>
+    <script>
+      window.onload = function () {
+        document.body.classList.add('preloader-hidden');
+        window.setTimeout(function () {
+          document.body.classList.add('loaded');
+          document.body.classList.remove('preloader-hidden');
+        }, 500);
+      };
+    </script>
+  </body>
+</html>

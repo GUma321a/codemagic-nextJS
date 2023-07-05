@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qargaly</title>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="images/favicons/site.webmanifest" />
+    <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- Open Graph -->
+
+    <!-- Styles -->
+    <style>
+      .preloader {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        background: #fff;
+        z-index: 99999;
+      }
+      .preloader__image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .preloader__circle {
+        width: 20px;
+        height: 20px;
+        background-color: #1c1e53;
+        border-radius: 50%;
+        -webkit-animation: preloader-bounce 1.4s ease-in-out 0s infinite both;
+        animation: preloader-bounce 1.4s ease-in-out 0s infinite both;
+      }
+      .preloader__circle + .preloader__circle {
+        margin-left: 8px;
+      }
+      .preloader__circle--1 {
+        -webkit-animation-delay: -0.32s;
+        animation-delay: -0.32s;
+      }
+      .preloader__circle--2 {
+        -webkit-animation-delay: -0.16s;
+        animation-delay: -0.16s;
+      }
+      .preloader-hidden .preloader {
+        transition: 0.3s opacity;
+        opacity: 0;
+      }
+      .loaded .preloader {
+        display: none;
+      }
+
+      @-webkit-keyframes preloader-bounce {
+        0%,
+        80%,
+        100% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        40% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+      @keyframes preloader-bounce {
+        0%,
+        80%,
+        100% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        40% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="./css/libs.min.css" />
+    <link rel="stylesheet" href="./css/style.min.css" />
+  </head>
+
+  <body class="body-text-regular">
+    <div class="preloader">
+      <div class="preloader__image">
+        <div class="preloader__circle preloader__circle--1"></div>
+        <div class="preloader__circle preloader__circle--2"></div>
+        <div class="preloader__circle preloader__circle--3"></div>
+      </div>
+    </div>
+
+    <div class="overflow-hidden">
+      <header class="header">
+        <div class="container-fluid">
+          <div class="header__navbar">
+            <nav class="header__menu">
+              <ul class="header__menu-list body-text-medium">
+                <li class="header__menu-list-item"><a class="header__menu-list-link homepage-link" href="#">О НАС</a></li>
+                <li class="header__menu-list-item"><a class="header__menu-list-link" href="#">LIFE ФОТО</a></li>
+                <li class="header__menu-list-item"><a class="header__menu-list-link" href="#">КАК ДОЕХАТЬ</a></li>
+                <li class="header__menu-list-item"><a class="header__menu-list-link" href="/сottages.html">КОТТЕДЖИ</a></li>
+                <li class="header__menu-list-item"><a class="header__menu-list-link" href="#">РЕСТОРАН</a></li>
+                <li class="header__menu-list-item"><a class="header__menu-list-link" href="./reviews.html">ОТЗЫВЫ</a></li>
+                <!-- <li class="header__menu-list-item header__menu-list-item--menu"><a class="header__menu-list-link" href="./contact.html">Contact us</a></li> -->
+              </ul>
+              <!-- <a href="./contact.html" class="header__contact-link button-cta">Contact us</a> -->
+            </nav>
+            <div class="burger"><span></span></div>
+            <div class="header__logo">
+              <a href="." class="header__logo-link"><img src="./images/illustrations/logo.png" alt="Logo" /></a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="reviews">
+          <div class="container">
+            <div class="reviews__inner">
+              <h4 class="reviews__title heading-h5">Отзывы</h4>
+              <div class="reviews__rating">
+                <p class="reviews__grade heading-h6">Оценка:<span>4.9</span></p>
+                <a href="#" class="reviews__btn subtitle-l">ОСТАВИТЬ ОТЗЫВ</a>
+              </div>
+            </div>
+            <div class="reviews__form">
+              <h4 class="reviews__form-title heading-h5">Отзывы</h4>
+              <form class="reviews__form-wrapper">
+                <input type="text" placeholder="Напишите ваш отзыв..." class="reviews__form-input reviews__form-text subtitle-l" />
+                <input type="text" placeholder="Ваше имя.." class="reviews__form-input reviews__form-name subtitle-l" />
+                <input type="text" placeholder="Вилла.." class="reviews__form-input reviews__form-cottage subtitle-l" />
+                <!-- <div class="my-rating"></div> -->
+                <div class="rating__wrapper">
+                  <fieldset class="rating"><input type="radio" id="star5" name="rating" value="5" /><label class="full" for="star5" title="Awesome - 5 stars"></label> <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label> <input type="radio" id="star4" name="rating" value="4" /><label class="full" for="star4" title="Pretty good - 4 stars"></label> <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label> <input type="radio" id="star3" name="rating" value="3" /><label class="full" for="star3" title="Meh - 3 stars"></label> <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label> <input type="radio" id="star2" name="rating" value="2" /><label class="full" for="star2" title="Kinda bad - 2 stars"></label> <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label> <input type="radio" id="star1" name="rating" value="1" /><label class="full" for="star1" title="Sucks big time - 1 star"></label> <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label></fieldset>
+                </div>
+                <button type="submit" class="reviews__form-btn subtitle-l">ОТПРАВИТЬ</button>
+              </form>
+            </div>
+            <div class="reviews__comment-items">
+              <div class="reviews__comment-item">
+                <div class="reviews__comment-top">
+                  <div class="reviews__comment-user">
+                    <p class="reviews__comment-name body-text-medium">Таня Юсипова</p>
+                    <p class="reviews__comment-date body-text-medium">12 августа</p>
+                  </div>
+                  <p class="reviews__comment-rating"><span>4.2</span>/5</p>
+                </div>
+                <p class="reviews__comment-text subtitle-s">Коттедж с личной баней, террасой с лежаками, большой гостиной, мини-баром и лаунж зоной. Данный коттедж имеет 3 комнаты, и большой диван в гостиной.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer subtitle-s">
+        <div class="container">
+          <h6 class="footer__title heading-h5">Contact Info</h6>
+          <div class="footer__info-wrapper">
+            <div class="footer__info-item subtitle-m">
+              <img src="./images/icons/footer-icon-1.svg" alt="icon" class="footer__info-img" />
+              <p class="footer__info-text">Казахстан, Алматы, турбекова 12a</p>
+            </div>
+            <div class="footer__info-item subtitle-m">
+              <img src="./images/icons/footer-icon-2.svg" alt="icon" class="footer__info-img" />
+              <a href="mailto:qargali-relax@support" class="footer__info-mail">qargali-relax@support</a>
+            </div>
+            <div class="footer__info-item subtitle-m">
+              <img src="./images/icons/footer-icon-3.png" alt="icon" class="footer__info-img" />
+              <a href="tel:+77892199321" class="footer__info-tell">+77892199321 ( клик )</a>
+            </div>
+          </div>
+          <div class="footer__pay">
+            <img class="footer__pay-icon" src="./images/icons/visa.svg" alt="visa" />
+            <img class="footer__pay-icon" src="./images/icons/mastercard.svg" alt="mastercard" />
+          </div>
+          <div class="footer__copy body-text-medium">
+            <p class="footer__copy-text">Все права защищены</p>
+            <p class="footer__copy-text">Разработка - Genius Studio</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./js/main.min.js"></script>
+    <script>
+      window.onload = function () {
+        document.body.classList.add('preloader-hidden');
+        window.setTimeout(function () {
+          document.body.classList.add('loaded');
+          document.body.classList.remove('preloader-hidden');
+        }, 500);
+      };
+    </script>
+  </body>
+</html>

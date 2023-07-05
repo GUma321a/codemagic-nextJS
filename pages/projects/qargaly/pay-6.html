@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qargaly</title>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="images/favicons/site.webmanifest" />
+    <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- Open Graph -->
+
+    <!-- Styles -->
+    <style>
+      .preloader {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        background: #fff;
+        z-index: 99999;
+      }
+      .preloader__image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .preloader__circle {
+        width: 20px;
+        height: 20px;
+        background-color: #1c1e53;
+        border-radius: 50%;
+        -webkit-animation: preloader-bounce 1.4s ease-in-out 0s infinite both;
+        animation: preloader-bounce 1.4s ease-in-out 0s infinite both;
+      }
+      .preloader__circle + .preloader__circle {
+        margin-left: 8px;
+      }
+      .preloader__circle--1 {
+        -webkit-animation-delay: -0.32s;
+        animation-delay: -0.32s;
+      }
+      .preloader__circle--2 {
+        -webkit-animation-delay: -0.16s;
+        animation-delay: -0.16s;
+      }
+      .preloader-hidden .preloader {
+        transition: 0.3s opacity;
+        opacity: 0;
+      }
+      .loaded .preloader {
+        display: none;
+      }
+
+      @-webkit-keyframes preloader-bounce {
+        0%,
+        80%,
+        100% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        40% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+      @keyframes preloader-bounce {
+        0%,
+        80%,
+        100% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        40% {
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="./css/libs.min.css" />
+    <link rel="stylesheet" href="./css/style.min.css" />
+  </head>
+
+  <body class="body-text-regular">
+    <div class="preloader">
+      <div class="preloader__image">
+        <div class="preloader__circle preloader__circle--1"></div>
+        <div class="preloader__circle preloader__circle--2"></div>
+        <div class="preloader__circle preloader__circle--3"></div>
+      </div>
+    </div>
+
+    <div class="overflow-hidden">
+      <header class="header">
+        <div class="container-fluid">
+          <div class="header__navbar">
+            <nav class="header__menu">
+              <ul class="header__menu-list body-text-medium">
+                <li class="header__menu-list-item"><a class="header__menu-list-link homepage-link" href="#">О НАС</a></li>
+                <li class="header__menu-list-item"><a class="header__menu-list-link" href="#">LIFE ФОТО</a></li>
+                <li class="header__menu-list-item"><a class="header__menu-list-link" href="#">КАК ДОЕХАТЬ</a></li>
+                <li class="header__menu-list-item"><a class="header__menu-list-link" href="/сottages.html">КОТТЕДЖИ</a></li>
+                <li class="header__menu-list-item"><a class="header__menu-list-link" href="#">РЕСТОРАН</a></li>
+                <li class="header__menu-list-item"><a class="header__menu-list-link" href="./reviews.html">ОТЗЫВЫ</a></li>
+                <!-- <li class="header__menu-list-item header__menu-list-item--menu"><a class="header__menu-list-link" href="./contact.html">Contact us</a></li> -->
+              </ul>
+              <!-- <a href="./contact.html" class="header__contact-link button-cta">Contact us</a> -->
+            </nav>
+            <div class="burger"><span></span></div>
+            <div class="header__logo">
+              <a href="." class="header__logo-link"><img src="./images/illustrations/logo.png" alt="Logo" /></a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="pay-1 pay__margin">
+          <div class="container">
+            <h4 class="pay-1__title heading-h5">Подтверждение бронирования</h4>
+            <div class="pay-1__info-inner">
+              <div class="pay-1__info-wrapper">
+                <p class="pay-1__info-title body-text-medium">Подтверждение бронирования</p>
+                <p class="pay-1__info-subtitle body-text-medium">Бронь №3134124124</p>
+                <div class="pay-1__info-details">
+                  <p class="pay-1__info-details-title subtitle-l">ДЕТАЛИ БРОНИРОВАНИЯ</p>
+                  <div class="pay-1__info-details-cottage pay-1__info-details-item">
+                    <p class="pay-1__info-details-case body-text-medium">Коттеж:</p>
+                    <p class="pay-1__info-details-key body-text-medium">PRIVATE VILLA 3</p>
+                  </div>
+                  <div class="pay-1__info-details-name pay-1__info-details-item">
+                    <p class="pay-1__info-details-case body-text-medium">Фио:</p>
+                    <p class="pay-1__info-details-key body-text-medium">Кокшамбаев Мастурбек</p>
+                  </div>
+                  <div class="pay-1__info-details-date pay-1__info-details-item">
+                    <p class="pay-1__info-details-case body-text-medium">Даты:</p>
+                    <p class="pay-1__info-details-key body-text-medium">14 - 16 июля</p>
+                  </div>
+                  <div class="pay-1__info-details-number pay-1__info-details-item">
+                    <p class="pay-1__info-details-case body-text-medium">Кол-во ночей:</p>
+                    <p class="pay-1__info-details-key body-text-medium">2</p>
+                  </div>
+                  <div class="pay-1__info-details-tell pay-1__info-details-item">
+                    <p class="pay-1__info-details-case body-text-medium">Телефон/Mail:</p>
+                    <p class="pay-1__info-details-key body-text-medium">77901288312</p>
+                  </div>
+                </div>
+              </div>
+              <a href="#" class="pay-1__info-change body-text-medium">Изменить даты</a>
+              <p class="pay-1__info-text body-text-medium">Бронирование ожидает оплаты, после оплаты бронь будет подтверждена!</p>
+            </div>
+            <p class="pay-1__armored-title subtitle-l">Верификация карты</p>
+            <form class="pay__bg">
+              <p class="pay-6__armored-warn">Внимание! Из-за частых случаев мошенничества с использованием чужих кредитных карт, в оплате через Apple/Google Pay, вы должны пройти простую верификацию на владение картой. Верификация не потребуется для дальнейших платежей.</p>
+
+              <div class="pay-6__armored-card-id">
+                <p class="pay-6__armored-card-id-title">Номер карты</p>
+                <p class="pay-6__armored-card-id-number pay__card-number">4411 **** **** 2211</p>
+              </div>
+
+              <div class="pay-1__armored-card-info pay-6__armored-card-info">
+                <label for="pay-1__armored-input" class="pay-1__armored-label body-text-medium">Имя Фамилия</label>
+                <input type="numbers" class="pay-1__armored-input pay__input pay-1__armored-card pay-1__armored-card-number" />
+              </div>
+              <div class="pay-1__armored-card-info pay-6__armored-card-info">
+                <label for="pay-1__armored-input" class="pay-1__armored-label body-text-medium">Номер карты</label>
+                <input type="numbers" class="pay-1__armored-input pay__input pay-1__armored-card pay-1__armored-card-number" />
+              </div>
+              <div class="pay-1__armored-card-inner">
+                <div class="pay-1__armored-card-info">
+                  <label for="pay-1__armored-input" class="pay-1__armored-label body-text-medium">Срок действия</label>
+                  <input type="numbers" class="pay-1__armored-input pay__input pay-1__armored-card" />
+                </div>
+                <p class="pay-1__armored-card-decor">/</p>
+                <div class="pay-1__armored-card-info">
+                  <input type="numbers" class="pay-1__armored-input pay__input pay-1__armored-card" />
+                </div>
+                <div class="pay-1__armored-card-img">
+                  <img src="./images/icons/card-lock.png" loading="lazy" alt="lock" />
+                </div>
+                <div class="pay-1__armored-card-info">
+                  <label for="pay-1__armored-input" class="pay-1__armored-label body-text-medium">СVV / CVC </label>
+                  <input type="numbers" class="pay-1__armored-input pay__input pay-1__armored-card" />
+                </div>
+              </div>
+
+              <button type="submit" class="pay-1__armored-btn pay-6__armored-btn pay__btn heading-h6">Получить код</button>
+              <p class="pay-6__armored-btn-text">После подтверждения карты, вы сможете платить Apple Pay - без верификации</p>
+              <div class="pay-1__armored-icons">
+                <img src="./images/decor/telefon-pay.png" loading="lazy" alt="icon" />
+              </div>
+              <p class="pay-1__armored-text">Данные ваших платежных карт защищены с помощью современного протокола защиты платежных данных TLS. Платежные данные видны только вам и банк-эмитенту.</p>
+              <div class="pay-1__armored-bank">
+                <img src="./images/decor/bank.png" loading="lazy" alt="bank" />
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+      <footer class="footer subtitle-s">
+        <div class="container">
+          <h6 class="footer__title heading-h5">Contact Info</h6>
+          <div class="footer__info-wrapper">
+            <div class="footer__info-item subtitle-m">
+              <img src="./images/icons/footer-icon-1.svg" alt="icon" class="footer__info-img" />
+              <p class="footer__info-text">Казахстан, Алматы, турбекова 12a</p>
+            </div>
+            <div class="footer__info-item subtitle-m">
+              <img src="./images/icons/footer-icon-2.svg" alt="icon" class="footer__info-img" />
+              <a href="mailto:qargali-relax@support" class="footer__info-mail">qargali-relax@support</a>
+            </div>
+            <div class="footer__info-item subtitle-m">
+              <img src="./images/icons/footer-icon-3.png" alt="icon" class="footer__info-img" />
+              <a href="tel:+77892199321" class="footer__info-tell">+77892199321 ( клик )</a>
+            </div>
+          </div>
+          <div class="footer__pay">
+            <img class="footer__pay-icon" src="./images/icons/visa.svg" alt="visa" />
+            <img class="footer__pay-icon" src="./images/icons/mastercard.svg" alt="mastercard" />
+          </div>
+          <div class="footer__copy body-text-medium">
+            <p class="footer__copy-text">Все права защищены</p>
+            <p class="footer__copy-text">Разработка - Genius Studio</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./js/main.min.js"></script>
+    <script>
+      window.onload = function () {
+        document.body.classList.add('preloader-hidden');
+        window.setTimeout(function () {
+          document.body.classList.add('loaded');
+          document.body.classList.remove('preloader-hidden');
+        }, 500);
+      };
+    </script>
+  </body>
+</html>
